@@ -1,7 +1,7 @@
 # Momentum/DevTab clone
 # App name coming soon...
 
-## Current Version: Beta 0.0.1
+## Current Version: Beta 0.0.2
 
 <b> Organization, productivity, bookmarks application. </b>
 
@@ -24,8 +24,20 @@
 </ul>
 
 ## Changelog
+### Version 0.0.2
 <div>
-<p>Changelog is coming soon...</p>
+  <ul>
+    <li>Added current time & date</li>
+    <li>Added pomodoro/tomato timer</li>
+  </ul>
+</div>
+
+### Version 0.0.1
+<div>
+  <ul>
+    <li>Basic wireframes</li>
+    <li>GitHub presentation</li>
+  </ul>
 </div>
 
 ## Wireframes
