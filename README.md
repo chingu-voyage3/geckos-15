@@ -18,9 +18,10 @@
 
 ### Team
 <ul>
-  <li>@louisf (PM)</li>
+  <li>@Nicolas BG (Project Manager)</li>
+  <li>@louisf</li>
   <li>@Dpbrinkm</li>
-  <li>@Nicolas BG</li>
+  <li>@Andreas Sandskär</li>
 </ul>
 
 ## Changelog
