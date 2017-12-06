@@ -1,17 +1,24 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Movie quote generator game</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Movie Quote Generator</title>
 </head>
-	<body>
-		<div class="container" id="movieQuotes">
-			<h2 id="quoteHeader"></h2>
-			<form id="answer">
-				<input type="text" placeholder="What movie is this from?">
-				<input type="submit" name="" value="Show me what you got">
-			</form>
-			<p class="score">Your Score: </p>
-		</div>
-	<script type="text/javascript" src="javascript.js"></script>
-	</body>
+<body>
+	<div class="container" id="movieQuotes">
+		<h2 id="quoteHeader"></h2>
+		<form id="answer">
+			<input type="text" placeholder="What movie is this from?">
+			<input type="submit" name="" value="Show me what you got">
+		</form>
+		<p class="score">Your Score: </p>
+	</div>
+
+
+	<script type="text/javascript" src="assets/jsonquotes.js"></script>
+	<script type="text/javascript" src="assets/quoteGenerator.js"></script>
+</body>
 </html>
+

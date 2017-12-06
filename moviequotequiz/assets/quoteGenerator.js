@@ -1,6 +1,7 @@
 
+document.getElementById("quoteHeader").innerHTML = movies[0].quote;
 
-
+/*
 let counter = "";
 let rndObject = movies[Math.floor(Math.random()*movies.length)];
 
@@ -10,7 +11,7 @@ function generateQuote(){
 	let newQuote = rndObject.quote;
 	document.getElementById('quoteHeader').innerHTML = newQuote; 
 };
-
+function generateQuote();
 
 function answerCheck(userAnswer){
 	if (userAnswer == rndObject.movie){
@@ -19,3 +20,4 @@ function answerCheck(userAnswer){
 	}
 	else return alert("Nice try");
 }
+*/
