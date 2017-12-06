@@ -1,0 +1,19 @@
+
+
+var movies = [
+{ 	
+	"movie": "The Big Lebawski";
+	"quote": "I don't roll on the sabbath";
+},
+{
+	"movie": "Superbad";
+	"quote": "Sorry the Cohen brothers dont direct my porn";
+
+},
+{
+	"movie": "Lord of the Rings";
+	"quote": "One ring to rule them all";
+}
+]
+
+
