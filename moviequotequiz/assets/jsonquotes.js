@@ -6,7 +6,7 @@ var movies = [
 },
 {
 	"movie": "Superbad",
-	"quote": "Sorry the Cohen brothers dont direct my porn"
+	"quote": "Sorry the Cohen brothers don't direct my porn"
 
 },
 {
@@ -62,7 +62,97 @@ var movies = [
 	"movie": "Christmas Vacation",
 	"quote": "The little lights aren’t twinkling Clark"
 
-}
+},
+{
+	"movie": "Tropic Thunder",
+	"quote": "I don't read the script, the script reads me"
+
+},
+{
+	"movie": "Predator",
+	"quote": "There's something out there waiting for us.... and it ain't no man"
+
+},
+{
+	"movie": "The Good The Bad And The Ugly",
+	"quote": "When you have to shoot, shoot, don’t talk"
+
+},
+{
+	"movie": "Dispicable me",
+	"quote": "IT'S SO FLUFFY!!"
+
+},
+{
+	"movie": "Zootopia",
+	"quote": "... and how did you repay my generosity? With a rug, made from the butt of a skunk... a skunk-butt-rug"
+
+},
+{
+	"movie": "The Other Guys",
+	"quote": "...Gator never been about that, never, never been about playin' no sh**!"
+
+},
+{
+	"movie": "The Dark Knight Rises",
+	"quote": "...you think your darkness is your ally? You merely adopted the dark. I was born in it. Moulded by it"
+
+},
+{
+	"movie": "Terminator",
+	"quote": "Come with me if you want to live"
+
+},
+{
+	"movie": "Predator",
+	"quote": "Get to the chopper now!"
+
+},
+{
+	"movie": "Pulp Fiction",
+	"quote": "A royal with cheese"
+
+},
+{
+	"movie": "Forrest Gump",
+	"quote": "...shrimp is the fruit of the sea; you can BBQ it, broil it, bake it, sauté it... shrimp kebabs, shrimp creole, shrimp gumbo.."
+
+},
+{
+	"movie": "The Dark Night",
+	"quote": "Why so serious?"
+
+},
+{
+	"movie": "The lord of the rings",
+	"quote": "So do all who live to see such times, but that is not for them to decide. All we have to decide is what to do with the time that is given to us"
+
+},
+{
+	"movie": "Harry Potter",
+	"quote": "Of course it is happening inside your head, but why on earth should that mean that it is not real?"
+
+},
+{
+	"movie": "Harry Potter",
+	"quote": "It does not dwell on dreams and forget to live"
+
+},
+{
+	"movie": "The Goonies",
+	"quote": "heeeeyyyyyy youuuuuuu guyyyyssss"
+
+},
+{
+	"movie": "Saving Private Ryan",
+	"quote": "F.U.B.A.R. Fucked Up Beyond All Recognition"
+
+},
+{
+	"movie": "Star Wars",
+	"quote": "May the Force be with you"
+
+},
 ];
 
 

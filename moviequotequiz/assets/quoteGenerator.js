@@ -5,7 +5,8 @@
 let rndNumber = [Math.floor(Math.random()* movies.length)];
 let movieTitle = movies[rndNumber].movie;
 let movieQuote = movies[rndNumber].quote;
-console.log(movieQuote);
+let negativeResponse = negative[rndNumber].response;
+console.log(negativeResponse);
 console.log(movieTitle);
 
 function generateQuote(){
@@ -29,19 +30,32 @@ function userAnswerCheck(){
 	//console.log(userAnswer);
 }
 */
-let counter = 0;
-const answerCheck = document.getElementById('answerButton');
 
+
+
+
+
+const answerCheck = document.getElementById('answerButton');
 answerCheck.addEventListener('click', userAnswerCheck);
 
+
+let counter = 0;
 function userAnswerCheck(){
    const userAnswerText = document.getElementById('userAnswerText');
-   console.log(userAnswerText.value)
-   if (userAnswerText.value == movieTitle){
+   if (userAnswerText.value.toLowerCase() == movieTitle.toLowerCase()){
        counter += 2000;
-       alert ("You did it!");
+       //so that page reloads after alert
+       if(!alert(positive[rndNumber].response)){window.location.reload();}
    }
-   else alert("Close, but no cigar");
+   else alert(negative[rndNumber].response);
+}
+
+
+const whiteFlag = document.getElementById('giveUp');
+whiteFlag.addEventListener('click', advanceToNextMovie);
+
+function advanceToNextMovie() {
+	if(!alert(movieTitle)){window.location.reload();}
 }
 
 
