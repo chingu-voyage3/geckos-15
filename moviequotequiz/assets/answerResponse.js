@@ -55,5 +55,5 @@ var positive = [
 },
 {
 	"response": "Nice work champ"
-},
+}
 ];
