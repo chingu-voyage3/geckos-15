@@ -13,15 +13,14 @@
   <div class="container" id="calculator">
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12">
-        <p id="calculatorDisplay"></p>
+        <div class="container" id="inputBox">
+          <p id="calculatorDisplay"></p>
+        </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-3 col-md-3 col-lg-3">
-        <a class="btn btn-danger" id="calculatorClearAll">AC</a>
-      </div>
-      <div class="col-sm-3 col-md-3 col-lg-3">
-        <a class="btn btn-danger" id="calculatorClear">C</a>
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <a class="btn btn-danger bigButton" id="calculatorClear">C</a>
       </div>
       <div class="col-sm-3 col-md-3 col-lg-3">
         <a class="btn btn-primary" id="/">/</a>
@@ -74,18 +73,19 @@
     </div>
     <div class="row">
       <div class="col-sm-6 col-md-6 col-lg-6">
-        <a class="btn btn-warning bigButton" id="0">0</a>
+        <a class="btn btn-info bigButton" id="0">0</a>
       </div>
       <div class="col-sm-6 col-md-6 col-lg-6">
-        <a class="btn btn-success bigButton" id="equals">=</a>
+        <a class="btn btn-success bigButton" id="calculatorEquals">=</a>
       </div>
     </div>
   </div>
   <!-- **********CALCULATOR ENDS********** -->
-  <script src="calculator.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="calculator.js"></script>
   
 </body>
 </html>

@@ -1,8 +1,8 @@
 
 // Store value selected by user 
-var pomodoroTimer = parseInt(document.getElementById("pomodoroTimer").innerHTML);
+let pomodoroTimer = parseInt(document.getElementById("pomodoroTimer").innerHTML);
 // Create switch that will be used to stop the counter from running
-var pomodoroSw = "off";
+let pomodoroSw = "off";
 
 // Subtract function for timer starting point
 pomodoroSub.onclick = function(){
@@ -48,7 +48,7 @@ pomodoroAdd.onclick = function(){
 pomodoroStart.onclick = function(){
   // Prevents starting the function while it's already running
   if(pomodoroSw === "off"){
-    var stopwatch = setInterval (time, 1000); // 1000ms = 1s; meaning we run this function every 1 sec
+    let stopwatch = setInterval (time, 1000); // 1000ms = 1s; meaning we run this function every 1 sec
     pomodoroSw = "on";  
     pomodoroTimer *= 60; // mytimer is acting like a minute on our html, we gotta transform it to seconds for itteration
     function time(){
