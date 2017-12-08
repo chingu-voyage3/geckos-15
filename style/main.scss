@@ -1,0 +1,152 @@
+$hover-color: #999;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+  margin: 50px 20px 0 0;
+}
+
+body { 
+  background-image: url(../images/bgimg.jpeg);
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+  background-color: $hover-color;
+}
+
+#navbarNav {
+  li {
+    color: white;
+    padding-right: 20px;
+  }
+}
+
+#features {
+  color: white;
+  max-width: 80px;
+  margin-top: 200px;
+  padding-left: 8px;
+  border-radius: 0 20px 20px 0;
+  li {
+    list-style: none;
+    padding-top: 30px;
+    text-shadow: 10px 10px 10px black;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.5);
+      color: red;
+      animation: ease-in;
+      transition: 0.5s;
+    }
+  }
+}
+
+#curApp {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: white;
+  text-align: right;
+}
+
+#general {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: white;
+  text-align: right;
+  text-shadow: 5px 5px 5px black;
+  h2 {
+    margin-bottom: 2em;
+  }
+  form {
+    display: inline-block;
+    text-align: right;
+    margin-bottom: 2em;
+  }
+  input[type=submit] {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 5px 5px 5px black;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  li {
+    list-style: none;
+    font-size: 2.5em;
+  }
+
+  #credits {
+    margin-top: 10em !important;
+  }
+}
+
+#pomodoroFrame {
+  width: 400px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid black;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+  button {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 2em;
+    margin: 10px;
+    padding: 10px;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  span {
+    font-size: 2em;
+  }
+  #pomodoroSub, #pomodoroAdd {
+    width: 50px;
+  }
+}
+
+#calculatorApp {
+  width: 225px;
+  padding-top: 20px;
+  margin: 0 auto;
+  height: auto;
+  background: none;
+  #inputBox {
+    height: 40px;
+    background-color: #333;
+    padding: 10px 10px;
+    margin: 10px 0;
+  }
+  p {
+    color: white;
+    text-align: right;
+  }
+  a {
+    color: white !important;
+    width: 33px;
+    margin-bottom: 10px;
+  }
+  .bigButton {
+    width: 100%;
+  }
+  a:hover {
+    cursor: pointer;
+  }
+}

@@ -9,11 +9,13 @@ function clock(){
     let hours = date.getHours();
     let minutes = date.getMinutes();
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    
     // Update #date li with value
     document.getElementById("date").innerText = day + " " + months[month] + " " + year;
     // Update #time li with value
-    document.getElementById("time").innerText = hours + ":" + minutes;
+    if (minutes < 10){
+        document.getElementById("time").innerText = hours + ":0" + minutes;
+    } else
+        document.getElementById("time").innerText = hours + ":" + minutes;
 }
 // Run the clock function every second to update html with real-time data
 setInterval(clock, 1000);
