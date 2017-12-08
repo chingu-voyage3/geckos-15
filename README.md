@@ -1,7 +1,7 @@
 # Momentum/DevTab clone
 # App name coming soon...
 
-## Current Version: Beta 0.0.2
+## Current Version: Beta 0.0.4
 
 <b> Organization, productivity, bookmarks application. </b>
 
@@ -25,6 +25,20 @@
 </ul>
 
 ## Changelog
+### Version 0.0.4
+<div>
+  <ul>
+    <li>Added landing page</li>
+  </ul>
+</div>
+
+### Version 0.0.3
+<div>
+  <ul>
+    <li>Added calculator</li>
+  </ul>
+</div>
+
 ### Version 0.0.2
 <div>
   <ul>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Geckos-15 project</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- ********** NAVBAR STARTS ********** -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <a class="navbar-brand" href="https://github.com/chingu-voyage3/geckos-15">Geckos-15</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" id="date">
+            </li>
+            <li class="nav-item" id="time">
+            </li>
+          </ul>
+      </div>
+    </nav>
+    <!-- ********** NAVBAR ENDS ********** -->
+    <div class="container-fluid">
+      <div class="row">
+      <!-- ********** FEATURES MENU STARTS ********** -->
+        <div class="col-sm-1 col-md-1 col-lg-1" id="features">
+          <div class="container" id="sideBar">
+            <ul>
+              <li id="toDo"><i class="fa fa-tasks fa-3x" aria-hidden="true"></i></li>
+              <li id="bookmarks"><i class="fa fa-bookmark-o fa-3x" aria-hidden="true"></i></li>
+              <li id="tomatoClock"><i class="fa fa-clock-o fa-3x" aria-hidden="true"></i></li>
+              <li id="calculator"><i class="fa fa-calculator fa-3x" aria-hidden="true"></i></li>
+              <li id="quiz"><i class="fa fa-question-circle fa-3x" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
+      <!-- ********** FEATURES MENU ENDS ********** -->
+
+      <!-- ********** SELECTED APPLICATION BODY STARTS ********** -->
+        <div class="col-sm-11 col-md-5 col-lg-5">
+          <div class="container" id="curApp">
+      <!-- ********** POMODORO TIMER STARTS ********** -->
+            <div class="hidden feature" id="pomodoro">
+              <div class="container" id="pomodoroFrame">
+                <button id="pomodoroSub">- </button><span id="pomodoroTimer">25</span><button id="pomodoroAdd"> +</button>
+                <br>
+                <button id="pomodoroStart">START</button><button id="pomodoroReset">RESET</button>
+                <br>
+                <span id="pomodoroStopwatch">25:00</span>
+              </div>
+            </div>
+      <!-- ********** POMODORO TIMER ENDS ********** -->
+
+      <!-- **********CALCULATOR STARTS********** -->
+            <div class="hidden feature" id="calculatorApp">
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                  <div class="container" id="inputBox">
+                    <p id="calculatorDisplay"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                  <a class="btn btn-danger bigButton" id="calculatorClear">C</a>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                  <a class="btn btn-primary" id="/">/</a>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                  <a class="btn btn-primary" id="*">*</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                  <a class="btn btn-info" id="7">7</a>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                  <a class="btn btn-info" id="8">8</a>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                  <a class="btn btn-info" id="9">9</a>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                  <a class="btn btn-primary" id="+">+</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                  <a class="btn btn-info" id="4">4</a>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                  <a class="btn btn-info" id="5">5</a>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                  <a class="btn btn-info" id="6">6</a>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                  <a class="btn btn-primary" id="-">-</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                  <a class="btn btn-info" id="1">1</a>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                  <a class="btn btn-info" id="2">2</a>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                  <a class="btn btn-info" id="3">3</a>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                  <a class="btn btn-primary" id=".">.</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                  <a class="btn btn-info bigButton" id="0">0</a>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                  <a class="btn btn-success bigButton" id="calculatorEquals">=</a>
+                </div>
+              </div>
+            </div>
+    <!-- **********CALCULATOR ENDS********** -->
+          </div>
+          
+        </div>
+      <!-- ********** SELECTED APPLICATION BODY ENDS ********** -->
+
+      <!-- ********** GENERAL INFO STARTS ********** -->
+        <div class="col-sm-11 col-md-5 col-lg-5">
+          <div class="container" id="general">
+            <h2><span id="greet"></span>, champ!</h2>
+
+            <form method="get" action="http://www.google.com/search" target="_blank"> 
+              <div style="padding:4px;width:20em;">
+              <table border="0" cellpadding="0">
+              <tr><td>
+              <input type="text"   name="q" size="25"
+               maxlength="255" value="" />
+              <input type="submit" value="Google Search"/></td></tr>
+              <tr><td align="center" style="font-size:75%">
+              </td></tr></table>
+              </div>  
+            </form>
+
+            <ul>
+              <li>Belgrade, RS</li>
+              <li>Clear Sky</li>
+              <li>15°C</li>
+            </ul>
+
+            <ul id="credits">
+              <li>Credits</li>
+              <li>Privacy</li>
+            </ul>
+          </div>
+
+        </div>
+      <!-- ********** GENERAL INFO ENDS ********** -->
+      </div>
+    </div>
+    
+    
+    
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="script/main.js"></script>
+  </body>
+</html>
