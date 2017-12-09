@@ -1,0 +1,19 @@
+.container {
+	text-align: center;
+	margin: 5rem auto;
+	max-width: 500px;
+
+}
+
+#getWeatherButton {
+	padding: 0.8rem 1.2rem;
+	font-size: 1.2rem;
+	background-color: #00cc00;
+	border: 0.1rem solid lightgrey;
+	border-radius: 1rem;
+	outline: none;
+}
+
+#getWeatherButton:hover {
+	background-color: #00ff00;
+}
