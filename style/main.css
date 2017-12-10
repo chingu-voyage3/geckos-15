@@ -10,6 +10,9 @@
 .active {
   display: block;
   margin: 50px 20px 0 0;
+  transform: scale(1);
+  animation: ease-in;
+  transition: 0.5s;
 }
 
 body {
@@ -38,6 +41,9 @@ body {
   list-style: none;
   padding-top: 30px;
   text-shadow: 10px 10px 10px black;
+  transform: scale(1);
+  animation: ease-in;
+  transition: 0.5s;
 }
 
 #features li:hover {
@@ -93,17 +99,24 @@ body {
 }
 
 #general #credits {
-  margin-top: 10em !important;
+  margin-top: 20em !important;
+}
+
+#general #credits li {
+  display: inline;
+  padding-left: 20px;
+  font-size: 1.5em;
 }
 
 #pomodoroFrame {
-  width: 400px;
-  height: 300px;
+  width: 100%;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.5);
-  border: 2px solid black;
+  border: 1px solid black;
   text-align: center;
   color: white;
   padding-top: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
 }
 
 #pomodoroFrame button {
@@ -129,16 +142,19 @@ body {
 }
 
 #calculatorApp {
-  width: 225px;
-  padding-top: 20px;
-  margin: 0 auto;
+  width: 100%;
   height: auto;
-  background: none;
+  padding: 20px;
+  margin: 40px auto;
+  height: auto;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid black;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
 }
 
 #calculatorApp #inputBox {
   height: 40px;
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 10px 10px;
   margin: 10px 0;
 }
@@ -160,6 +176,10 @@ body {
 
 #calculatorApp a:hover {
   cursor: pointer;
+}
+
+#bookmarksApp .jumbotron {
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
  
 
