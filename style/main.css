@@ -143,6 +143,7 @@ body {
 
 #calculatorApp {
   width: 100%;
+  max-width: 300px;
   height: auto;
   padding: 20px;
   margin: 40px auto;
@@ -180,6 +181,81 @@ body {
 
 #bookmarksApp .jumbotron {
   background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+#movieQuiz {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid black;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+  color: white;
+  margin-top: 50px;
+}
+
+#movieQuiz #quizBanner {
+  background-color: black;
+  font-size: 1.6em;
+  padding: 5px 20px;
+  margin-top: -25px;
+}
+
+#movieQuiz #quizScore {
+  background-color: black;
+  padding: 5px 10px;
+  margin-top: -18px;
+}
+
+#movieQuiz #quizAnswer {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+#movieQuiz #quizSubmit {
+  width: 50%;
+  margin: 10px 25% 10px 25%;
+  color: white;
+  background-color: black;
+  border: none;
+  padding: 7px 0;
+}
+
+#movieQuiz #quizSubmit:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+}
+
+#movieQuiz .text-center {
+  font-size: 1.6em;
+}
+
+#movieQuiz #quizStart, #movieQuiz #quizReset {
+  width: 5em;
+  background-color: black;
+  color: white;
+  border: none;
+  margin: 30px 10px 10px 0;
+  padding: 7px 0;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+}
+
+#movieQuiz #quizStart:hover, #movieQuiz #quizReset:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+}
+
+#movieQuiz #quizWrong {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: red;
+  margin: 30px 0 10px 10px;
+  padding: 7px 10px;
+}
+
+#movieQuiz #quizCorrect {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: green;
+  margin: 30px 0 10px 10px;
+  padding: 7px 10px;
 }
  
 
