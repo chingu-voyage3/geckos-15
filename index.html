@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Eczar|Libre+Baskerville" rel="stylesheet"> 
   </head>
   <body>
     <!-- ********** NAVBAR STARTS ********** -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <a class="navbar-brand" href="https://github.com/chingu-voyage3/geckos-15">Geckos-15</a>
+    <nav class="navbar navbar-expand-sm">
+      <a class="navbar-brand" href="https://github.com/chingu-voyage3/geckos-15"><i class="fa fa-github fa-3x"></i></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,6 +31,25 @@
     <!-- ********** NAVBAR ENDS ********** -->
     <div class="container-fluid">
       <div class="row">
+
+        <!-- ********** GENERAL INFO STARTS ********** -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="container" id="general">
+            <h2><span id="greet"></span>, champ!</h2>
+              <h3>Belgrade, RS Clear Sky 15°C</h3.
+            
+          <form method="get" action="http://www.google.com/search" target="_blank"> 
+              <div style="padding:4px;width:150em;">
+              <table border="0" cellpadding="0">
+              <tr><td>
+              <input type="text"   name="q" size="25"
+               maxlength="500" value="">
+            
+              </div>  
+            </form>
+          </div>
       <!-- ********** FEATURES MENU STARTS ********** -->
         <div class="col-sm-1 col-md-1 col-lg-1" id="features">
           <div class="container" id="sideBar">
@@ -45,8 +65,8 @@
       <!-- ********** FEATURES MENU ENDS ********** -->
 
       <!-- ********** SELECTED APPLICATION BODY STARTS ********** -->
-        <div class="col-sm-11 col-md-5 col-lg-5">
-          <div class="container" id="curApp">
+        <div class="col-sm-2 col-md-2 col-lg-2">
+          <div class="container-fluid" id="curApp">
       <!-- ********** POMODORO TIMER STARTS ********** -->
             <div class="hidden feature" id="pomodoro">
               <div class="container" id="pomodoroFrame">
@@ -132,40 +152,34 @@
             </div>
     <!-- **********CALCULATOR ENDS********** -->
           </div>
-          
         </div>
+        </div>
+      </div>
       <!-- ********** SELECTED APPLICATION BODY ENDS ********** -->
 
       <!-- ********** GENERAL INFO STARTS ********** -->
-        <div class="col-sm-11 col-md-5 col-lg-5">
+    <!--<div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
           <div class="container" id="general">
             <h2><span id="greet"></span>, champ!</h2>
+              <h3>Belgrade, RS</h3>
+              <h4>Clear Sky 15°C</h4>
+            
 
             <form method="get" action="http://www.google.com/search" target="_blank"> 
               <div style="padding:4px;width:20em;">
               <table border="0" cellpadding="0">
               <tr><td>
               <input type="text"   name="q" size="25"
-               maxlength="255" value="" />
+               maxlength="500" value="">
               <input type="submit" value="Google Search"/></td></tr>
-              <tr><td align="center" style="font-size:75%">
+              <tr><td>
               </td></tr></table>
               </div>  
             </form>
-
-            <ul>
-              <li>Belgrade, RS</li>
-              <li>Clear Sky</li>
-              <li>15°C</li>
-            </ul>
-
-            <ul id="credits">
-              <li>Credits</li>
-              <li>Privacy</li>
-            </ul>
           </div>
-
-        </div>
+        -->
       <!-- ********** GENERAL INFO ENDS ********** -->
       </div>
     </div>
