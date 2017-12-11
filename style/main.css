@@ -20,28 +20,6 @@ body {
   background-size: cover;
   background-color: #999;
 }
-li {
-  font-family: 'Libre Baskerville', serif;
-  }
-button {
-    font-family: 'Libre Baskerville', serif;
-}
-
-input[type ="text"]{
-  padding: 10px 10px 10px 40px;
-  border: 0px;
-  border-radius: 40px;
-  opacity: 0.7;
-  font-size: 20px;
-  font-family: 'Eczar', serif;
-  background: url('../images/googleLogo.png') no-repeat;
-  background-size: contain;
-  background-color: #808080;
-}
-
-#sideBar {
-  z-index: -1;
-}
 
 #navbarNav li {
   color: white;
@@ -75,7 +53,7 @@ input[type ="text"]{
   padding: 0;
   width: 100%;
   color: white;
-  text-align: left;
+  text-align: right;
 }
 
 #general {
@@ -88,19 +66,8 @@ input[type ="text"]{
 }
 
 #general h2 {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 68px;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
-#general h3 {
-  font-family: 'Eczar', serif;
-  font-size: 45px;
-}
-#general h4 {
-  font-family: 'Eczar', serif;
-  font-size: 45px;
-}
-
 
 #general form {
   display: inline-block;
@@ -194,7 +161,6 @@ input[type ="text"]{
 #calculatorApp a:hover {
   cursor: pointer;
 }
-
  
 
  /*# sourceMappingURL= main.css.map */
