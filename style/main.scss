@@ -1,3 +1,4 @@
+
 // ***** COLORS ***** //
 $hover-color: #999;
 // ***** GLOBAL ***** //
@@ -171,6 +172,20 @@ body {
 #bookmarksApp {
   .jumbotron {
     background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+  header {
+    background-color: black;
+    padding: 10px 10px;
+    text-align: center;
+    width: 50%;
+    margin: 0 0 -30px 20px;
+  }
+  h4 {
+    text-align: left;
+  }
+  #addBmBtn {
+    width: 60%;
+    font-size: 2em;
   }
 }
 
