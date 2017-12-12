@@ -21,9 +21,37 @@ body {
   background-color: #999;
 }
 
+input[type ="text"]{
+  padding: 10px 10px 10px 40px;
+  border: 5px;
+  border-radius: 40px;
+  font-size: 20px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 200;
+  background: url('../images/googleLogo.png') no-repeat;
+  background-size: contain;
+  background-color: white;
+  opacity: 0.5;
+  min-width: 40px;
+  max-width: auto;
+  display: flex;
+  flex-grow: 1;
+  min-width: 400px;
+}
+
 #navbarNav li {
   color: white;
   padding-right: 20px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+#git {
+     background: -webkit-gradient(linear, left top, left bottom, from(#ff5db1), to(#ef017c));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: initial;
 }
 
 #features {
@@ -37,7 +65,8 @@ body {
 #features li {
   list-style: none;
   padding-top: 30px;
-  text-shadow: 10px 10px 10px black;
+  
+
 }
 
 #features li:hover {
@@ -57,43 +86,29 @@ body {
 }
 
 #general {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+  margin: 10px;
   color: white;
-  text-align: right;
+  text-align: center;
   text-shadow: 5px 5px 5px black;
 }
 
 #general h2 {
-  margin-bottom: 2em;
+  padding-top: 100px;
+  margin-bottom: 1em;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 300;
+  font-size: 57px;
+
 }
 
 #general form {
-  display: inline-block;
-  text-align: right;
+  text-align: center;
   margin-bottom: 2em;
 }
-
-#general input[type=submit] {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5em;
-  text-shadow: 5px 5px 5px black;
-}
-
-#general input[type=submit]:hover {
-  cursor: pointer;
-}
-
-#general li {
-  list-style: none;
-  font-size: 2.5em;
-}
-
-#general #credits {
-  margin-top: 10em !important;
+#general h3 {
+  padding: 0 0 50px 5px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 200;
 }
 
 #pomodoroFrame {
