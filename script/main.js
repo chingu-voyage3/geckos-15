@@ -147,7 +147,7 @@ pomodoroReset.onclick = function (){
 // Calculator display value
 let calcDisplay = "";
 // Click functions
-$(".c").on("click", function(){
+$("a").on("click", function(){
   // Clear all button
   if(this.id === "calculatorClear"){
     calcDisplay = "";
@@ -155,11 +155,11 @@ $(".c").on("click", function(){
   }
   // = button, doing the calculation using eval
   else if (this.id === "calculatorEquals"){
-    let isWhole = eval(calcDisplay);
-    if (isWhole % 1 != 0) {
-      document.getElementById("calculatorDisplay").innerHTML = isWhole.toFixed(3);
+    calcDisplay = eval(calcDisplay);
+    if (calcDisplay % 1 != 0) {
+      document.getElementById("calculatorDisplay").innerHTML = calcDisplay.toFixed(3);
     } else {
-      document.getElementById("calculatorDisplay").innerHTML = isWhole;
+      document.getElementById("calculatorDisplay").innerHTML = calcDisplay;
     }
   }
   // Other buttons, adding them as a string for later eval
