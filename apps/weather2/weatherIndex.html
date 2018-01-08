@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Weather App - Geckos15</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="weatherStyle.css">
+	</head>
+	<body>
+		<section class="display">
+			<div class="container">
+				<h1 id="location"></h1>
+				<h3 id="currentTemp" class="current"></h3>
+				<h3 id="currentWeather" class="current"></h3>
+				<span><img id="currentIcon"></span>
+				<br>
+				<br>
+				
+				<h3 id="day0Info" class="forecast"></h3>
+				<h4 id="day0Forecast" class="forecast"></h4>
+				<span><img src="" id="day0Icon"></span>
+				
+				<br>
+				<h3 id="day1Info" class="forecast"></h3>
+				<h4 id="day1Forecast" class="forecast"></h4>
+				<span><img id="day1Icon"></span>
+				
+				<br>
+				<h3 id="day2Info" class="forecast"></h3>
+				<h4 id="day2Forecast" class="forecast"></h4>
+				<span><img id="day2Icon"></span>
+				
+			</div>
+		</section>
+
+		<section class="selectors">
+			<div class="container">
+				<div class="radioBtns">
+					<input type="radio" name="selectBtn" id="localBtn" checked>
+					<label for="localBtn">Local</label>
+
+					<input type="radio" name="selectBtn" id="cityBtn">
+					<label for="cityBtn">City</label>
+				</div>
+				<input type="text" id="cityInput" placeholder="Enter city name">
+				<br>
+				<button id="getWeatherButton">See Weather</button>
+			</div>
+		</section>
+		<script src="weatherApp.js" defer></script>
+	</body>
+</html>

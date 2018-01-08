@@ -1,0 +1,37 @@
+.feature {
+	font-family: $roboto;
+	color: white;
+	padding: 20px;
+
+	h1 {
+		font-size: 2em;
+		padding: 10px 0;
+		margin-bottom: 40px;
+	}
+
+	h3 {
+		font-size: 1.2em;
+		padding: 10px 0;
+	}
+
+	.btn {
+		padding: 5px 15px;
+	}
+
+	#bmDisplay {
+		padding: 20px 5px;
+
+		.col-3 {
+			font-family: $roboto;
+			font-size: 1.3em;
+			padding: 10px;
+			border-left: solid 2px orange;
+			border-right: solid 2px orange;
+
+			a {
+				padding-left: 5px;
+				color: orange;
+			}
+		}
+	}
+}

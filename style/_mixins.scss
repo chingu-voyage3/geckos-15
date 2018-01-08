@@ -1,0 +1,39 @@
+// Gradient Mixins for Icons, Buttons and Headings
+// To change the gradient, replace values inside:
+//** background: #ffe259;  /* fallback for old browsers */
+//** background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
+//** background: linear-gradient(to bottom, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+
+
+@mixin gradient {
+	background: #ffe259;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+@mixin icon-grad {
+	background: #fffc00;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #ffffff, #fffc00);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #ffffff, #fffc00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+@mixin icon-hover-grad {
+	background: #00c3ff;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #ffff1c, #00c3ff);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+@mixin buttons {
+	background: #ffe259;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #ffa751, #ffe259);
+}

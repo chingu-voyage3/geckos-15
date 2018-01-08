@@ -1,0 +1,41 @@
+#movieQuiz {
+	h1 {
+		text-align: left;
+	}
+
+	p {
+		margin: 10px 0;
+		font-size: 1.6em;
+	}
+
+	#quizAnswer {
+		width: 400px;
+		height: 35px;
+		border-radius: 10px;
+		border: none;
+		padding: 0 10px;
+		color: orange;
+		margin-top: 20px;
+	}
+
+	#quizSubmit,
+	#quizStart,
+	#quizReset {
+		@include buttons;
+		border: none;
+		border-radius: 10px;
+		height: 50px;
+		width: 150px;
+		color: white;
+		font-size: 1.2em;
+		margin: 40px 20px;
+	}
+
+	#quizCorrect {
+		color: green;
+	}
+
+	#quizWrong {
+		color: red;
+	}
+}

@@ -1,0 +1,76 @@
+#movieQuiz {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid black;
+  box-shadow: 10px 10px 10px black;
+  color: white;
+  margin-top: 50px;
+}
+
+#quizBanner {
+  background-color: black;
+  font-size: 1.6em;
+  padding: 5px 20px;
+  margin-top: -25px;
+}
+
+#quizScore {
+  background-color: black;
+  padding: 5px 10px;
+  margin-top: -18px;
+}
+
+#quizAnswer {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+#quizSubmit {
+  width: 50%;
+  margin: 10px 25% 10px 25%;
+  color: white;
+  background-color: black;
+  border: none;
+  padding: 7px 0;
+}
+
+#quizSubmit:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.text-center {
+  font-size: 1.6em;
+}
+
+#quizStart, #quizReset {
+  width: 5em;
+  background-color: black;
+  color: white;
+  border: none;
+  margin: 30px 10px 10px 0;
+  padding: 7px 0;
+}
+
+#quizStart:hover, #quizReset:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#quizWrong, #quizCorrect {
+  margin: 30px 0 10px 10px;
+  padding: 7px 0;
+}
+
+#quizWrong {
+  color: red;
+}
+
+#quizCorrect {
+  color: green;
+}
+
+.hide {
+  display: none;
+}

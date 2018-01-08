@@ -1,15 +1,14 @@
 # Momentum/DevTab clone
 # App name coming soon...
 
-## Current Version: Beta 0.0.4
+## Current Version: Beta 0.0.8
 
 <b> Organization, productivity, bookmarks application. </b>
 
 # Table of Contents
 1. [Introduction](#introduction)
 2. [Changelog](#changelog)
-3. [Wireframes](#wireframes)
-4. [User Stories](#user-stories)
+3. [User Stories](#user-stories)
 
 ## Introduction
 <div>
@@ -21,10 +20,36 @@
   <li>@Nicolas BG (Project Manager)</li>
   <li>@louisf</li>
   <li>@Dpbrinkm</li>
-  <li>@Andreas Sandskär</li>
 </ul>
 
 ## Changelog
+### Version 0.0.8
+<div>
+  <ul>
+    <li>Completed UI</li>
+  </ul>
+</div>
+
+### Version 0.0.7
+<div>
+  <ul>
+    <li>Added weather app</li>
+  </ul>
+</div>
+
+### Version 0.0.6
+<div>
+  <ul>
+    <li>Added movies quiz app</li>
+  </ul>
+</div>
+
+### Version 0.0.5
+<div>
+  <ul>
+    <li>Added bookmarks app</li>
+  </ul>
+</div>
 
 ### Version 0.0.4
 <div>
@@ -54,11 +79,6 @@
     <li>Basic wireframes</li>
     <li>GitHub presentation</li>
   </ul>
-</div>
-
-## Wireframes
-<div>
-<p>Wireframes are coming soon...</p>
 </div>
 
 ## User stories

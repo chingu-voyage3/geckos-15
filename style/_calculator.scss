@@ -1,0 +1,29 @@
+#calculatorApp {
+
+	h1 {
+		text-align: left;
+	}
+
+	#calcBox {
+		width: 350px;
+
+		#inputBox {
+			overflow:hidden;
+			text-overflow:ellipsis;
+
+			p {
+				font-size: 2em;
+				padding-top: 24px;
+			}
+		}
+
+		.btn {
+			border-radius: 5px;
+			@include buttons;
+			width: 60px;
+			height: 60px;
+			margin: 10px;
+			font-size: 2em;
+		}
+	}
+}

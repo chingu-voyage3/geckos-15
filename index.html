@@ -1,174 +1,232 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Geckos-15 project</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:200,300,400,600" rel="stylesheet"> 
+    <link rel="stylesheet" href="style/main.css">
+
+    <title>Geckos-15</title>
   </head>
-  <body>
-    <!-- ********** NAVBAR STARTS ********** -->
-    <nav class="navbar navbar-expand-sm">
-      <a class="navbar-brand" id="git" href="https://github.com/chingu-voyage3/geckos-15"><i class="fa fa-github fa-3x"></i></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item" id="date">
-            </li>
-            <li class="nav-item" id="time">
-            </li>
-          </ul>
-      </div>
-    </nav>
-    <!-- ********** NAVBAR ENDS ********** -->
-    <div class="container-fluid">
-      <div class="row">
-      <!-- ********** FEATURES MENU STARTS ********** -->
-        <div class="col-sm-1 col-md-1 col-lg-1" id="features">
-          <div class="container" id="sideBar">
-            <ul>
-              <li id="toDo"><i class="fa fa-tasks fa-3x" aria-hidden="true"></i></li>
-              <li id="bookmarks"><i class="fa fa-bookmark-o fa-3x" aria-hidden="true"></i></li>
-              <li id="tomatoClock"><i class="fa fa-clock-o fa-3x" aria-hidden="true"></i></li>
-              <li id="calculator"><i class="fa fa-calculator fa-3x" aria-hidden="true"></i></li>
-              <li id="quiz"><i class="fa fa-question-circle fa-3x" aria-hidden="true"></i></li>
-            </ul>
-          </div>
-        </div>
-      <!-- ********** FEATURES MENU ENDS ********** -->
-
-      <!-- ********** SELECTED APPLICATION BODY STARTS ********** -->
-        <div class="col-sm-11 col-md-5 col-lg-5">
-          <div class="container" id="curApp">
-      <!-- ********** POMODORO TIMER STARTS ********** -->
-            <div class="hidden feature" id="pomodoro">
-              <div class="container" id="pomodoroFrame">
-                <button id="pomodoroSub">- </button><span id="pomodoroTimer">25</span><button id="pomodoroAdd"> +</button>
-                <br>
-                <button id="pomodoroStart">START</button><button id="pomodoroReset">RESET</button>
-                <br>
-                <span id="pomodoroStopwatch">25:00</span>
-              </div>
-            </div>
-      <!-- ********** POMODORO TIMER ENDS ********** -->
-
-      <!-- **********CALCULATOR STARTS********** -->
-            <div class="hidden feature" id="calculatorApp">
-              <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                  <div class="container" id="inputBox">
-                    <p id="calculatorDisplay"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                  <a class="btn btn-danger bigButton" id="calculatorClear">C</a>
-                </div>
-                <div class="col-sm-3 col-md-3 col-lg-3">
-                  <a class="btn btn-primary" id="/">/</a>
-                </div>
-                <div class="col-sm-3 col-md-3 col-lg-3">
-                  <a class="btn btn-primary" id="*">*</a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-3 col-md-3 col-lg-3">
-                  <a class="btn btn-info" id="7">7</a>
-                </div>
-                <div class="col-sm-3 col-md-3 col-lg-3">
-                  <a class="btn btn-info" id="8">8</a>
-                </div>
-                <div class="col-sm-3 col-md-3 col-lg-3">
-                  <a class="btn btn-info" id="9">9</a>
-                </div>
-                <div class="col-sm-3 col-md-3 col-lg-3">
-                  <a class="btn btn-primary" id="+">+</a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-3 col-md-3 col-lg-3">
-                  <a class="btn btn-info" id="4">4</a>
-                </div>
-                <div class="col-sm-3 col-md-3 col-lg-3">
-                  <a class="btn btn-info" id="5">5</a>
-                </div>
-                <div class="col-sm-3 col-md-3 col-lg-3">
-                  <a class="btn btn-info" id="6">6</a>
-                </div>
-                <div class="col-sm-3 col-md-3 col-lg-3">
-                  <a class="btn btn-primary" id="-">-</a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-3 col-md-3 col-lg-3">
-                  <a class="btn btn-info" id="1">1</a>
-                </div>
-                <div class="col-sm-3 col-md-3 col-lg-3">
-                  <a class="btn btn-info" id="2">2</a>
-                </div>
-                <div class="col-sm-3 col-md-3 col-lg-3">
-                  <a class="btn btn-info" id="3">3</a>
-                </div>
-                <div class="col-sm-3 col-md-3 col-lg-3">
-                  <a class="btn btn-primary" id=".">.</a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                  <a class="btn btn-info bigButton" id="0">0</a>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                  <a class="btn btn-success bigButton" id="calculatorEquals">=</a>
-                </div>
-              </div>
-            </div>
-    <!-- **********CALCULATOR ENDS********** -->
-          </div>
+  <body onload="bookmarksDisplay()">
+    <!-- Greeting, Time and Date -->
+    <div class="container" id="header">
+      <h2><span id="greet"></span> champ</h2>
+      <h1><span id="time"></span></h1>
+      <h3><span id="date"></span></h3>
+    </div>
+    <!-- Link to our Github repository -->
+    <a href="https://github.com/chingu-voyage3/geckos-15" target="_blank" id="team"><i class="fa fa-github fa-2x"></i></a>
+    <!-- Sidebar app icons -->
+    <div id="sidebar">
+      <ul>
+        <li><i id="bookmarks" class="fa fa-bookmark fa-2x"></i><span>Bookmarks Manager</span></li>
+        <li><i id="tomatoClock" class="fa fa-clock-o fa-2x"></i><span>Productivity Timer</span></li>
+        <li><i id="todoapp" class="fa fa-tasks fa-2x"></i><span>Activity Manager</span></li>
+        <li><i id="quiz" class="fa fa-question fa-2x"></i><span>Movie Quiz</span></li>
+        <li><i id="calculator" class="fa fa-calculator fa-2x"></i><span>Calculator</span></li>
+        <!-- <li><i id="weather" class="fa fa-cloud fa-2x"></i><span>Weather</span></li> -->
+      </ul>
+    </div>
+    <!-- Weather -->
+    <div id="weather">
+      <section class="display">
+        <div class="container">
+          <h1 id="location"></h1>
+          <h3 id="currentTemp" class="current"></h3>
+          <h3 id="currentWeather" class="current"></h3>
+          <span><img id="currentIcon"></span>
+          <br>
+          <br>
+          
+          <h3 id="day0Info" class="forecast"></h3>
+          <h4 id="day0Forecast" class="forecast"></h4>
+          <span><img src="" id="day0Icon"></span>
+          
+          <br>
+          <h3 id="day1Info" class="forecast"></h3>
+          <h4 id="day1Forecast" class="forecast"></h4>
+          <span><img id="day1Icon"></span>
+          
+          <br>
+          <h3 id="day2Info" class="forecast"></h3>
+          <h4 id="day2Forecast" class="forecast"></h4>
+          <span><img id="day2Icon"></span>
           
         </div>
-      <!-- ********** SELECTED APPLICATION BODY ENDS ********** -->
-
-      <!-- ********** GENERAL INFO STARTS ********** -->
-        <div class="col-sm-11 col-md-5 col-lg-5">
-          <div class="container" id="general">
-            <h2><span id="greet"></span>, champ!</h2>
-           
-              <h3>Belgrade, RS Clear Sky 15°C</h3>
-            <form method="get" action="http://www.google.com/search" target="_blank"> 
-              
-              <table border="0" cellpadding="0">
-              <tr><td>
-              <input type="text"   name="q" size="auto"
-               maxlength="400" value="Ask Google....">
-               </td></tr>
-          
-              
+      </section>
+  
+      <section class="selectors">
+        <div class="container">
+          <div class="radioBtns">
+            <input type="radio" name="selectBtn" id="localBtn" checked>
+            <label for="localBtn">Local</label>
+  
+            <input type="radio" name="selectBtn" id="cityBtn">
+            <label for="cityBtn">City</label>
+          </div>
+          <input type="text" id="cityInput" placeholder="Enter city name">
+          <br>
+          <button id="getWeatherButton">See Weather</button>
+        </div>
+      </section>
+    </div>
+    <!-- Currently selected app area -->
+    <div class="container" id="main">
+      <!-- Bookmarks app -->
+      <div class="feature hidden" id="bookmarksApp">
+        <header class="header clearfix">
+          <h1>Bookmarks Manager</h1>
+        </header>   
+        <main role="main">  
+            <h3>Add Favorite Website</h3>
+            <form id="bmForm">
+              <div class="form-group">
+                <input type="text" class="form-control" id="bmName" placeholder="Website Name...">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="bmUrl" placeholder="Website URL...">
+              </div>
+              <button type="submit" class="btn btn-warning">Add</button>
             </form>
-
-    
+          <div class="row marketing">
+            <div class="col-lg-12">
+              <div class="row" id="bmDisplay">
+              </div>
+            </div>
+          </div>  
+        </main>
+      </div>
+      <!-- Calculator app -->
+      <div class="feature text-center hidden" id="calculatorApp">
+        <header class="header clearfix">
+          <h1>Calculator</h1>
+        </header>
+        <div class="container" id="calcBox">
+          <div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="calculatorClear">C</a>
+            </div>
+            <div class="col-sm-9 col-md-9 col-lg-9">
+              <div class="container" id="inputBox">
+                <p class="pull-right" id="calculatorDisplay"></p>
+              </div>
+            </div>
           </div>
-
+          <div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="7">7</a>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="8">8</a>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="9">9</a>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="+">+</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="4">4</a>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="5">5</a>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="6">6</a>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="-">-</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="1">1</a>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="2">2</a>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="3">3</a>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="*">*</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="0">0</a>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="calculatorEquals">=</a>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id=".">.</a>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3">
+              <a class="btn" id="/">/</a>
+            </div>
+          </div>
         </div>
-      <!-- ********** GENERAL INFO ENDS ********** -->
+      </div>
+      <!-- Pomodoro Clock -->
+      <div class="feature text-center hidden" id="pomodoroApp">
+        <header class="header clearfix">
+          <h1>Pomodoro Clock</h1>
+        </header>
+        <div class="container" id="pomodoroFrame">
+          <i class="fa fa-chevron-up fa-3x" id="pomodoroAdd"></i>
+          <p id="pomodoroTimer">25</p>
+          <i class="fa fa-chevron-down fa-3x" id="pomodoroSub"></i>
+          <br>
+          <button id="pomodoroStart">START</button><button id="pomodoroReset">RESET</button>
+          <br>
+          <p id="pomodoroStopwatch">25:00</p>
+          <br>
+        </div>
+      </div>
+      <!-- Movie Quiz -->
+      <div class="feature text-center hidden" id="movieQuiz">
+        <header class="header clearfix">
+          <h1>Movie Quiz</h1>
+        </header>
+        <br>
+        <div class="container">
+          <form action="submit" id="quizForm">
+            <p id="movieQuote">PRESS START TO BEGIN!</p>
+            <input type="text" placeholder="Which movie is this line from?" id="quizAnswer"><br>
+            <input type="button" value="Submit Answer" id="quizSubmit">
+          </form>
+        </div>
+  
+        <div class="container text-center">
+          <h5>Current progress</h5>
+          <span id="quizProgress">0</span><span> of 10</span>
+        </div>
+  
+        <div class="container">
+          <button id="quizStart">Start</button>
+          <button id="quizReset" onclick="quizReset()">Reset</button><br>
+          <p class="pull-right hidden" id="quizCorrect"><i class="fa fa-check-circle" aria-hidden="true"></i> Correct!</p>
+          <p class="pull-right hidden" id="quizWrong"><i class="fa fa-times-circle" aria-hidden="true"></i> Wrong!</p>
+        </div>
+  
       </div>
     </div>
-    
-    
-    
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <!-- Custom Javascript -->
     <script src="script/main.js"></script>
   </body>
 </html>
