@@ -1,28 +1,23 @@
 /* ***** APP BUTTONS STARTS ***** */
 $("#calculator").on("click", function(){
-  $(".feature").removeClass("active");
   $(".feature").addClass("hidden");
-  $("#calculatorApp").addClass("active");
+  $("#calculatorApp").removeClass("hidden");
 });
 
 $("#tomatoClock").on("click", function(){
-  $(".feature").removeClass("active");
   $(".feature").addClass("hidden");
-  $("#pomodoro").addClass("active");
+  $("#pomodoroApp").removeClass("hidden");
 });
 
 $("#bookmarks").on("click", function(){
-  $(".feature").removeClass("active");
   $(".feature").addClass("hidden");
-  $("#bookmarksApp").addClass("active");
+  $("#bookmarksApp").removeClass("hidden");
   bookmarksDisplay();
 });
 
 $("#quiz").on("click", function(){
-  $(".feature").removeClass("active");
   $(".feature").addClass("hidden");
-  $("#movieQuiz").addClass("active");
-  bookmarksDisplay();
+  $("#movieQuiz").removeClass("hidden");
 });
 /* ***** APP BUTTONS ENDS ***** */
 
@@ -37,9 +32,9 @@ function clock(){
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  // Update #date li with value
+  // Update #date with value
   document.getElementById("date").innerText = day + " " + months[month] + " " + year;
-  // Update #time li with value
+  // Update #time with value
   if (minutes < 10){
       document.getElementById("time").innerText = hours + ":0" + minutes;
   } else {
@@ -80,7 +75,7 @@ pomodoroSub.onclick = function(){
     // Prevent the timer from going below 1
     if (pomodoroTimer === 0){
       // If timer becomes 0, it brings it back up to 1
-      pomodoroTimer += 1;
+      pomodoroTimer = 1;
       alert("Time is relative.. but not THAT relative :D");
       // Update our HTML to match mytimer variable
       document.getElementById("pomodoroTimer").innerHTML = pomodoroTimer;
@@ -99,7 +94,7 @@ pomodoroAdd.onclick = function(){
     // Prevent the timer from going above 60
     if (pomodoroTimer >= 60){
       // If timer becomes 60, it brings it back 59
-      pomodoroTimer -= 1;
+      pomodoroTimer = 59;
       alert("Who on earth would make pomodoro longer than one hour?!");
       // Update our HTML to match mytimer variable
       document.getElementById("pomodoroTimer").innerHTML = pomodoroTimer;
@@ -112,7 +107,7 @@ pomodoroStart.onclick = function(){
   // Prevents starting the function while it's already running
   if(pomodoroSw === "off"){
     let stopwatch = setInterval (time, 1000); // 1000ms = 1s; meaning we run this function every 1 sec
-    pomodoroSw = "on";  
+    pomodoroSw = "on"; 
     pomodoroTimer *= 60; // mytimer is acting like a minute on our html, we gotta transform it to seconds for itteration
     function time(){
       pomodoroTimer -= 1; // Every second we decrement by one
@@ -160,8 +155,12 @@ $("a").on("click", function(){
   }
   // = button, doing the calculation using eval
   else if (this.id === "calculatorEquals"){
-    calcDisplay = eval(calcDisplay);
-    document.getElementById("calculatorDisplay").innerHTML = calcDisplay;
+    let isWhole = eval(calcDisplay);
+    if (isWhole % 1 != 0) {
+      document.getElementById("calculatorDisplay").innerHTML = isWhole.toFixed(3);
+    } else {
+      document.getElementById("calculatorDisplay").innerHTML = isWhole;
+    }
   }
   // Other buttons, adding them as a string for later eval
   else {
@@ -185,7 +184,7 @@ function bmSubmit(pd){
   var bookmark = {
     name: bmName,
     url: bmUrl
-  }
+  };
 
   if(localStorage.getItem("bookmarks") === null){
     var bookmarks = [];
@@ -211,7 +210,7 @@ function bmDelete(url){
     }
   }
   localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
-  bookmarksDisplay()
+  bookmarksDisplay();
 }
 
 // Add bookmark to the HTML and print it on the screen
@@ -223,12 +222,10 @@ function bookmarksDisplay(){
   for(var i = 0; i < bookmarks.length; i++){
     var name = bookmarks[i].name;
     var url = bookmarks[i].url;
-    console.log(url);
-    bmDisplay.innerHTML +=  "<div class='well'>"+
-                            "<h5>"+name+
-                            ' <a class="btn btn-primary" target="_blank" href="https://'+url+'">Visit</a> ' +
-                            " <a onclick='bmDelete(\""+url+"\")' class='btn btn-danger' href='#'>Remove</a> "+
-                            "</h5>"+
+    bmDisplay.innerHTML +=  "<div class='col-3'>"+
+                            name+
+                            ' <a target="_blank" href="https://'+url+'"><i class="fa fa-globe pull-right"></i></a> ' +
+                            " <a onclick='bmDelete(\""+url+"\") 'href='#'><i class='fa fa-times pull-right'></i></a> "+
                             "</div>";
                           }
 }
@@ -261,20 +258,17 @@ let quizMovie; // local movie used for answer comparrison
 let quizRecord; // highest score picked up from local storage
 
 // ***** RESTART THE QUIZ ***** //
-
 function quizReset(){
   quizScore = 0;
   quizProgress = 0;
   quizMovie = "";
   quizRecord = 0;
-  document.getElementById("movieQuote").innerHTML = "Quote from a movie will be presented, and you should guess the movie it was from. PRESS START TO BEGIN!";
+  document.getElementById("movieQuote").innerHTML = "PRESS START TO BEGIN!";
   quizUpdate();
 }
 
-// ***** UPDATE HTML WITH NEW VALUES *****//
-
+// ***** UPDATE HTML WITH NEW VALUES *****/
 function quizUpdate(){
-  document.getElementById("quizScore").innerHTML = "SCORE: " + quizScore;
   document.getElementById("quizProgress").innerHTML = quizProgress;
   document.getElementById("quizAnswer").value = "";
 }
@@ -284,13 +278,11 @@ document.getElementById("quizStart").addEventListener("click", function quizStar
   getQuote();
 });
 
-// ***** PICK A RANDOM QUOTE AND PRINT IT *****//
-
+// ***** PICK A RANDOM QUOTE AND PRINT IT *****/
 function getQuote(){
   let randomNumber = Math.round(Math.random() * (movies.length-1));
   document.getElementById("movieQuote").innerHTML = movies[randomNumber].quote;
   quizMovie = movies[randomNumber].movie;
-  console.log(quizMovie);
 }
 
 // ***** PREVENT SUBMIT/RELOAD ON ENTER-KEY !!! credits to Kailas Mane !!! ***** //
@@ -303,8 +295,7 @@ function stopReloadKey(evt) {
 }
 document.onkeypress = stopReloadKey;
 
-// ***** MAIN FUNCTION TRIGGERED BY SUBMIT ANSWER BUTTON CLICK *****//
-
+// ***** MAIN FUNCTION TRIGGERED BY SUBMIT ANSWER BUTTON CLICK *****/
 document.getElementById("quizSubmit").addEventListener("click", function quizSubmit(){
   // Stores the user input
   let quizAnswer = document.getElementById("quizAnswer").value;
@@ -370,6 +361,234 @@ function quizHighestScore(){
 }
 
 /* ***** MOVIE QUIZ ENDS ***** */
+
+/* ***** WEATHER STARTS ***** */
+const tempConvert = function(kelvin) {
+	const temp = {
+		celsius: Math.round(kelvin - 273.15) + "°C",
+		fahrenheit: Math.round(((kelvin - 273.15) * 1.8) + 32) + "°F"
+	};
+	return temp;
+};
+
+
+const getDateInfo = function(numDays) {
+	const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+	const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	const newDay = new Date();
+	const days = [];
+
+	for (let i = 0; i < numDays; i++) {
+		newDay.setDate(newDay.getDate() + 1);
+		let day = {
+			day: weekdays[newDay.getDay()],
+			date: newDay.getDate(),
+			month: months[newDay.getMonth()],
+			year: newDay.getFullYear()
+		}
+		days.push(day);
+	}
+	return days;
+};
+
+
+const getPosition = function() {
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(getLocalWeather);
+	}
+	else {
+		return "Unable to retrieve your current positon";
+	}
+};
+
+
+const pick = function() {
+	return "&appid=5300f8bc54b3884e3240c056f4d4617a";
+};
+
+
+const getIcon = function(icon) {
+	return "http://openweathermap.org/img/w/" + icon + ".png";
+};
+
+
+const getLocalWeather = function(position) {
+
+	const lat = position.coords.latitude;
+	const lon = position.coords.longitude;
+
+
+	const locCurrentXHR = new XMLHttpRequest();
+	locCurrentXHR.open('GET', 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + pick(), true);
+	
+
+	locCurrentXHR.onload = function() {
+		if (this.status === 200) {
+			const currentData = JSON.parse(this.responseText);
+			const currentTemp = tempConvert(currentData.main.temp);
+			
+			document.getElementsByClassName('display')[0].style.display = 'block';
+			document.getElementById('location').innerHTML = currentData.name + ", " + currentData.sys.country;
+			document.getElementById('currentTemp').innerHTML = currentTemp.celsius + " / " + currentTemp.fahrenheit;
+			document.getElementById('currentWeather').innerHTML = currentData.weather[0].description;
+			document.getElementById('currentIcon').src = getIcon(currentData.weather[0].icon);
+		}
+	}
+	locCurrentXHR.send();
+
+
+
+	const locForecastXHR = new XMLHttpRequest();
+	locForecastXHR.open('GET', 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + pick(), true);
+	
+	locForecastXHR.onload = function() {
+		if (this.status === 200) {
+			const forecastData = JSON.parse(this.responseText);
+			
+			const totalForecasts = forecastData.list.length; 
+			const dailyForecasts = [];
+			for (let i = 0; i < totalForecasts; i++) {
+				if (forecastData.list[i].dt_txt.includes('12:00')) {
+					dailyForecasts.push(forecastData.list[i]);
+				}
+			}
+
+			const dateInfo = getDateInfo(3);
+			
+			const forecasts = [
+				{
+					day: dateInfo[0],
+					temp: tempConvert(dailyForecasts[0].main.temp),
+					weather: dailyForecasts[0].weather[0].main,
+					description: dailyForecasts[0].weather[0].description,
+					icon: getIcon(dailyForecasts[0].weather[0].icon)
+				},
+				{
+					day: dateInfo[1],
+					temp: tempConvert(dailyForecasts[1].main.temp),
+					weather: dailyForecasts[1].weather[0].main,
+					description: dailyForecasts[1].weather[0].description,
+					icon: getIcon(dailyForecasts[1].weather[0].icon)
+				},
+				{
+					day: dateInfo[2],
+					temp: tempConvert(dailyForecasts[2].main.temp),
+					weather: dailyForecasts[2].weather[0].main,
+					description: dailyForecasts[2].weather[0].description,
+					icon: getIcon(dailyForecasts[2].weather[0].icon)
+				}
+			];
+
+
+			document.getElementById('day0Info').innerHTML = forecasts[0].day.day + ", " + forecasts[0].day.date + " " + forecasts[0].day.month;
+			document.getElementById('day0Forecast').innerHTML = forecasts[0].temp.celsius + " / " + forecasts[0].temp.fahrenheit + " - " + forecasts[0].description;
+			document.getElementById('day0Icon').src = forecasts[0].icon;
+
+			document.getElementById('day1Info').innerHTML = forecasts[1].day.day + ", " + forecasts[1].day.date + " " + forecasts[1].day.month;
+			document.getElementById('day1Forecast').innerHTML = forecasts[1].temp.celsius + " / " + forecasts[1].temp.fahrenheit + " - " + forecasts[1].description;;
+			document.getElementById('day1Icon').src = forecasts[1].icon;
+
+			document.getElementById('day2Info').innerHTML = forecasts[2].day.day + ", " + forecasts[2].day.date + " " + forecasts[2].day.month;
+			document.getElementById('day2Forecast').innerHTML = forecasts[2].temp.celsius + " / " + forecasts[2].temp.fahrenheit + " - " + forecasts[2].description;;
+			document.getElementById('day2Icon').src = forecasts[2].icon;
+		}
+	};
+	locForecastXHR.send();
+};
+
+
+
+const getCityWeather = function() {
+	let city = document.getElementById('cityInput').value;
+
+	const cityCurrentXHR = new XMLHttpRequest();
+	cityCurrentXHR.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=' + city + pick(), true);
+
+	cityCurrentXHR.onload = function() {
+		if (this.status === 200) {
+			const currentData = JSON.parse(this.responseText);
+			const currentTemp = tempConvert(currentData.main.temp);
+			
+			//console.log(currentData);
+
+			document.getElementsByClassName('display')[0].style.display = 'block';
+			document.getElementById('location').innerHTML = currentData.name + ", " + currentData.sys.country;
+			document.getElementById('currentTemp').innerHTML = currentTemp.celsius + " / " + currentTemp.fahrenheit;
+			document.getElementById('currentWeather').innerHTML = currentData.weather[0].description;
+		}
+	}
+	cityCurrentXHR.send();
+
+
+	const cityForecastXHR = new XMLHttpRequest();
+	cityForecastXHR.open('GET', 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + pick(), true);
+
+	cityForecastXHR.onload = function() {
+		if (this.status === 200) {
+			const forecastData = JSON.parse(this.responseText);
+
+			const totalForecasts = forecastData.list.length; 
+			const dailyForecasts = [];
+			for (let i = 0; i < totalForecasts; i++) {
+				if (forecastData.list[i].dt_txt.includes('12:00')) {
+					dailyForecasts.push(forecastData.list[i]);
+				}
+			}
+
+			const dateInfo = getDateInfo(3);
+			
+			const forecasts = [
+				{
+					day: dateInfo[0],
+					temp: tempConvert(dailyForecasts[0].main.temp),
+					weather: dailyForecasts[0].weather[0].main,
+					description: dailyForecasts[0].weather[0].description,
+					icon: getIcon(dailyForecasts[0].weather[0].icon)
+				},
+				{
+					day: dateInfo[1],
+					temp: tempConvert(dailyForecasts[1].main.temp),
+					weather: dailyForecasts[1].weather[0].main,
+					description: dailyForecasts[1].weather[0].description,
+					icon: getIcon(dailyForecasts[1].weather[0].icon)
+				},
+				{
+					day: dateInfo[2],
+					temp: tempConvert(dailyForecasts[2].main.temp),
+					weather: dailyForecasts[2].weather[0].main,
+					description: dailyForecasts[2].weather[0].description,
+					icon: getIcon(dailyForecasts[2].weather[0].icon)
+				}
+			];
+
+			document.getElementById('day0Info').innerHTML = forecasts[0].day.day + ", " + forecasts[0].day.date + " " + forecasts[0].day.month;
+			document.getElementById('day0Forecast').innerHTML = forecasts[0].temp.celsius + " / " + forecasts[0].temp.fahrenheit + " - " + forecasts[0].description;
+			document.getElementById('day0Icon').src = forecasts[0].icon;
+
+			document.getElementById('day1Info').innerHTML = forecasts[1].day.day + ", " + forecasts[1].day.date + " " + forecasts[1].day.month;
+			document.getElementById('day1Forecast').innerHTML = forecasts[1].temp.celsius + " / " + forecasts[1].temp.fahrenheit + " - " + forecasts[1].description;;
+			document.getElementById('day1Icon').src = forecasts[1].icon;
+
+			document.getElementById('day2Info').innerHTML = forecasts[2].day.day + ", " + forecasts[2].day.date + " " + forecasts[2].day.month;
+			document.getElementById('day2Forecast').innerHTML = forecasts[2].temp.celsius + " / " + forecasts[2].temp.fahrenheit + " - " + forecasts[2].description;;
+			document.getElementById('day2Icon').src = forecasts[2].icon;
+		}
+	}
+	cityForecastXHR.send();
+};
+
+
+
+document.getElementsByClassName('radioBtns')[0].addEventListener('click', function() {
+	const cityInput = document.getElementById('cityInput');
+	document.getElementById('cityBtn').checked ? cityInput.style.display = 'inline' : cityInput.style.display = 'none';
+});
+
+
+document.getElementById('getWeatherButton').addEventListener('click', function() {
+	document.getElementById('localBtn').checked ? getPosition() : getCityWeather();
+});
+/* ***** WEATHER ENDS ***** */
 
 /* ***** DATABASE STARTS ***** */
 

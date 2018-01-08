@@ -1,0 +1,30 @@
+body, html {
+  height: 100%;
+  background-image: url("../images/bgImg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.hidden {
+	display: none;
+}
+
+* {
+	font-family: $roboto;
+	outline: none !important;
+}
+
+#main {
+	max-width: 1000px;
+	height: 600px;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin: 3em auto;
+	border-radius: 10px;
+}

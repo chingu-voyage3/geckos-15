@@ -1,0 +1,43 @@
+#header {
+	text-align: center;
+	padding-top: 1em;
+
+	h1 {
+		font-size: 5em;
+		font-weight: 300;
+		@include gradient;
+	}
+
+	h2 {
+		font-size: 3em;
+		@include gradient;
+		text-transform: uppercase;
+	}
+
+	h3 {
+		font-size: 2em;
+		@include gradient;
+	}
+}
+
+#team {
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	color: white;
+	font-family: $roboto;
+	font-size: 2em;
+
+	i {
+		@include icon-grad;
+		transform: scale(1);
+		transition: 0.5s;
+
+		&:hover {
+			cursor: pointer;
+			@include icon-hover-grad;
+			transform: scale(1.5);
+			transition: 0.5s;
+		}
+	}
+}
