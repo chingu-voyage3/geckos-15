@@ -147,7 +147,7 @@ pomodoroReset.onclick = function (){
 // Calculator display value
 let calcDisplay = "";
 // Click functions
-$("a").on("click", function(){
+$(".c").on("click", function(){
   // Clear all button
   if(this.id === "calculatorClear"){
     calcDisplay = "";
