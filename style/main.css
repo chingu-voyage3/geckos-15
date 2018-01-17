@@ -1,181 +1,442 @@
-* {
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, html {
+  height: 100%;
+  background-image: url("../images/bgImg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .hidden {
   display: none;
 }
 
-.active {
-  display: block;
-  margin: 50px 20px 0 0;
+* {
+  font-family: "Roboto", sans-serif;
+  outline: none !important;
 }
 
-body {
-  background-image: url("../images/bgImg.jpeg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #999;
+#main {
+  max-width: 1000px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 3em auto;
+  border-radius: 10px;
 }
 
-input[type ="text"]{
-  padding: 10px 10px 10px 40px;
-  border: 5px;
-  border-radius: 40px;
-  font-size: 20px;
-  font-family: 'Libre Franklin', sans-serif;
-  font-weight: 200;
-  background: url('../images/googleLogo.png') no-repeat;
-  background-size: contain;
-  background-color: white;
-  opacity: 0.5;
-  min-width: 40px;
-  max-width: auto;
-  display: flex;
-  flex-grow: 1;
-  min-width: 400px;
+#header {
+  text-align: center;
+  padding-top: 1em;
 }
 
-#navbarNav li {
+#header h1 {
+  font-size: 5em;
+  font-weight: 300;
+  background: #ffe259;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffa751, #ffe259);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#header h2 {
+  font-size: 3em;
+  background: #ffe259;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffa751, #ffe259);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+}
+
+#header h3 {
+  font-size: 2em;
+  background: #ffe259;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffa751, #ffe259);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#team {
+  position: absolute;
+  top: 15px;
+  left: 20px;
   color: white;
-  padding-right: 20px;
-  font-family: 'Libre Franklin', sans-serif;
-  font-weight: 200;
-  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
 }
 
-#git {
-     background: -webkit-gradient(linear, left top, left bottom, from(#ff5db1), to(#ef017c));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: initial;
-}
-
-#features {
-  color: white;
-  max-width: 80px;
-  margin-top: 200px;
-  padding-left: 8px;
-  border-radius: 0 20px 20px 0;
-}
-
-#features li {
-  list-style: none;
-  padding-top: 30px;
-  
-
-}
-
-#features li:hover {
-  cursor: pointer;
-  transform: scale(1.5);
-  color: red;
-  animation: ease-in;
+#team i {
+  background: #fffc00;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffffff, #fffc00);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffffff, #fffc00);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transform: scale(1);
   transition: 0.5s;
 }
 
-#curApp {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  color: white;
-  text-align: right;
+#team i:hover {
+  cursor: pointer;
+  background: #00c3ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #ffff1c, #00c3ff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #ffff1c, #00c3ff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transform: scale(1.5);
+  transition: 0.5s;
 }
 
-#general {
-  margin: 10px;
-  color: white;
+#sidebar {
+  width: 80px;
+  position: absolute;
+  top: 25%;
+  left: 10px;
+}
+
+#sidebar ul li {
+  padding-bottom: 10px;
   text-align: center;
+}
+
+#sidebar ul li i {
+  width: 50px;
+  height: 50px;
+  padding-top: 8px;
+  background: #fffc00;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffffff, #fffc00);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffffff, #fffc00);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+#sidebar ul li i:hover {
+  cursor: pointer;
+  background: #00c3ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #ffff1c, #00c3ff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #ffff1c, #00c3ff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
+#sidebar ul li span {
+  color: white;
+  font-family: "Roboto", sans-serif;
   text-shadow: 5px 5px 5px black;
 }
 
-#general h2 {
-  padding-top: 100px;
-  margin-bottom: 1em;
-  font-family: 'Libre Franklin', sans-serif;
-  font-weight: 300;
-  font-size: 57px;
-
+#weather {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: "Roboto", sans-serif;
 }
 
-#general form {
-  text-align: center;
-  margin-bottom: 2em;
-}
-#general h3 {
-  padding: 0 0 50px 5px;
-  font-family: 'Libre Franklin', sans-serif;
-  font-weight: 200;
-}
-
-#pomodoroFrame {
-  width: 400px;
-  height: 300px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 2px solid black;
-  text-align: center;
-  color: white;
-  padding-top: 20px;
-}
-
-#pomodoroFrame button {
-  color: white;
-  background: none;
-  border: none;
+#weather h1 {
   font-size: 2em;
-  margin: 10px;
-  padding: 10px;
-  outline: none;
+  margin-bottom: 20px;
 }
 
-#pomodoroFrame button:hover {
-  cursor: pointer;
-}
-
-#pomodoroFrame span {
-  font-size: 2em;
-}
-
-#pomodoroFrame #pomodoroSub, #pomodoroFrame #pomodoroAdd {
-  width: 50px;
-}
-
-#calculatorApp {
-  width: 225px;
-  padding-top: 20px;
+#weather .container {
+  text-align: center;
   margin: 0 auto;
-  height: auto;
-  background: none;
-}
-
-#calculatorApp #inputBox {
-  height: 40px;
-  background-color: #333;
-  padding: 10px 10px;
-  margin: 10px 0;
-}
-
-#calculatorApp p {
+  max-width: 500px;
   color: white;
-  text-align: right;
+  text-shadow: 5px 5px 5px black;
 }
 
-#calculatorApp a {
-  color: white !important;
-  width: 33px;
-  margin-bottom: 10px;
+#weather .radioBtns {
+  margin: 1.5rem 0 0 -0.5rem;
+  font-size: 1.25em;
 }
 
-#calculatorApp .bigButton {
-  width: 100%;
+#weather .display {
+  display: none;
 }
 
-#calculatorApp a:hover {
+#weather #localBtn, #weather #cityBtn {
   cursor: pointer;
 }
- 
 
- /*# sourceMappingURL= main.css.map */
+#weather #cityBtn {
+  margin-left: 2rem;
+}
+
+#weather #cityInput {
+  display: none;
+  padding: 0.5rem;
+  font-size: 1.25em;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  color: orange;
+}
+
+#weather #getWeatherButton {
+  padding: 0.6rem 1.3rem;
+  font-size: 1.5rem;
+  background: #ffe259;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffa751, #ffe259);
+  border-radius: 10px;
+  border: none;
+  margin: 1.5rem;
+  cursor: pointer;
+  outline: none;
+  color: white;
+}
+
+#weather #getWeatherButton:hover {
+  background-color: #00ff00;
+}
+
+.feature {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  padding: 20px;
+}
+
+.feature h1 {
+  font-size: 2em;
+  padding: 10px 0;
+  margin-bottom: 40px;
+}
+
+.feature h3 {
+  font-size: 1.2em;
+  padding: 10px 0;
+}
+
+.feature .btn {
+  padding: 5px 15px;
+}
+
+.feature #bmDisplay {
+  padding: 20px 5px;
+}
+
+.feature #bmDisplay .col-3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  padding: 10px;
+  border-left: solid 2px orange;
+  border-right: solid 2px orange;
+}
+
+.feature #bmDisplay .col-3 a {
+  padding-left: 5px;
+  color: orange;
+}
+
+#calculatorApp h1 {
+  text-align: left;
+}
+
+#calculatorApp #calcBox {
+  width: 350px;
+}
+
+#calculatorApp #calcBox #inputBox {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#calculatorApp #calcBox #inputBox p {
+  font-size: 2em;
+  padding-top: 24px;
+}
+
+#calculatorApp #calcBox .btn {
+  border-radius: 5px;
+  background: #ffe259;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffa751, #ffe259);
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  font-size: 2em;
+}
+
+#pomodoroApp h1 {
+  text-align: left;
+}
+
+#pomodoroApp i {
+  background: #fffc00;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffffff, #fffc00);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffffff, #fffc00);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#pomodoroApp i:hover {
+  cursor: pointer;
+}
+
+#pomodoroApp button {
+  background: #ffe259;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffa751, #ffe259);
+  border: none;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  color: white;
+  margin: 10px 20px;
+  font-size: 1.25em;
+}
+
+#pomodoroApp button:hover {
+  cursor: pointer;
+}
+
+#pomodoroApp p {
+  font-size: 4em;
+  color: white !important;
+  margin: 20px 0;
+}
+
+#movieQuiz h1 {
+  text-align: left;
+}
+
+#movieQuiz p {
+  margin: 10px 0;
+  font-size: 1.6em;
+}
+
+#movieQuiz #quizAnswer {
+  width: 400px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  padding: 0 10px;
+  color: orange;
+  margin-top: 20px;
+}
+
+#movieQuiz #quizSubmit,
+#movieQuiz #quizStart,
+#movieQuiz #quizReset {
+  background: #ffe259;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffa751, #ffe259);
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 150px;
+  color: white;
+  font-size: 1.2em;
+  margin: 40px 20px;
+}
+
+#movieQuiz #quizCorrect {
+  color: green;
+}
+
+#movieQuiz #quizWrong {
+  color: red;
+}
+/*# sourceMappingURL=main.css.map */
