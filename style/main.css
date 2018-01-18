@@ -439,4 +439,36 @@ body, html {
 #movieQuiz #quizWrong {
   color: red;
 }
+
+#todo {
+  font-family: "Roboto", sans-serif;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+#todosCompleted li {
+  text-decoration: line-through !important;
+}
+
+.display-tasks h2 {
+  color: orange;
+  font-size: 1.5em;
+  border-bottom: 2px solid orange;
+  padding-bottom: 5px;
+}
+
+.display-tasks li {
+  font-size: 1.2em;
+}
+
+.display-tasks li i {
+  color: orange;
+  font-weight: bold;
+}
+
+.display-tasks li i:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=main.css.map */

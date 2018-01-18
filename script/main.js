@@ -19,6 +19,11 @@ $("#quiz").on("click", function(){
   $(".feature").addClass("hidden");
   $("#movieQuiz").removeClass("hidden");
 });
+
+$("#todoapp").on("click", function(){
+  $(".feature").addClass("hidden");
+  $("#todo").removeClass("hidden");
+});
 /* ***** APP BUTTONS ENDS ***** */
 
 /* ***** TIME AND DATE STARTS ***** */
@@ -58,6 +63,93 @@ FUTURE FEATURE:
 # Allow users to pick a timezone from a drop-down manu..
 */
 /* ***** TIME AND DATE ENDS ***** */
+
+/* ***** TODO STARTS ***** */
+document.addEventListener("load", displayTodos());
+
+document.querySelector("#addTodos").addEventListener("click", addTodo);
+
+document.querySelector("#clearTodos").addEventListener("click", removeAllTodos);
+
+// Add items to the list & localStorage
+function addTodo(){
+  let input = document.querySelector(".form-control").value;
+  if(localStorage.getItem("todos") === null) {
+    let todos = [];
+    todos.push(input);
+    localStorage.setItem("todos", JSON.stringify(todos));
+  } else {
+    let todos = JSON.parse(localStorage.getItem("todos"));
+    todos.push(input);
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }
+  document.querySelector(".form-control").value = "";
+  displayTodos();
+}
+
+// Remove items from the list & localStorage
+function removeTodos(e){
+  let todos = JSON.parse(localStorage.getItem("todos"));
+  todos.splice(e, 1);
+  localStorage.setItem("todos", JSON.stringify(todos));
+  displayTodos();
+}
+
+function removeCompleted(e){
+  let completed = JSON.parse(localStorage.getItem("completed"));
+  completed.splice(e, 1);
+  localStorage.setItem("completed", JSON.stringify(completed));
+  displayTodos();
+}
+
+// Remove all data from the list & localStorage
+function removeAllTodos(){
+  localStorage.removeItem("todos");
+  localStorage.removeItem("completed");
+  displayTodos();
+}
+
+// Mark completed todos
+function doneTodos(e){
+  let todos = JSON.parse(localStorage.getItem("todos"));
+  if(localStorage.getItem("completed") === null){
+    let completed = [];
+    completed.push(todos.splice(e, 1));
+    localStorage.setItem("completed", JSON.stringify(completed));
+    localStorage.setItem("todos", JSON.stringify(todos));
+  } else {
+    let completed = JSON.parse(localStorage.getItem("completed"));
+    completed.push(todos.splice(e, 1));
+    localStorage.setItem("completed", JSON.stringify(completed));
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }
+  displayTodos();
+}
+
+// Display localStorage data to the user
+function displayTodos(){
+  let todos = JSON.parse(localStorage.getItem("todos"));
+  let completed = JSON.parse(localStorage.getItem("completed"));
+  document.getElementById("todosList").innerHTML = "";
+  document.getElementById("todosCompleted").innerHTML = "";
+
+  if (localStorage.getItem("todos")){
+    for (let i = 0; i < todos.length; i++){
+      document.getElementById("todosList").innerHTML += '<li>' + todos[i] + '<i onclick="removeTodos(' + i + ')" class="fa fa-times pull-right"></i><i onclick="doneTodos(' + i + ')" class="fa fa-check pull-right"></i></li>';
+    }
+  } else {
+    document.getElementById("todosList").innerHTML += "<p>What are you going to do today?</p>";
+  }
+
+  if (localStorage.getItem("completed")){
+    for (let i = 0; i < completed.length; i++){
+      document.getElementById("todosCompleted").innerHTML += '<li>' + completed[i] + '<i onclick="removeCompleted(' + i + ')" class="fa fa-times pull-right"></i></li>';
+    }
+  } else {
+    document.getElementById("todosCompleted").innerHTML += "<p>You don't have any completed activities, yet!</p>";
+  }
+}
+/* ***** TODO ENDS ***** */
 
 /* ***** POMODORO TIMER STARTS ***** */
 // Store value selected by user 

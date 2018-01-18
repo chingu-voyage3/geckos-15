@@ -1,7 +1,7 @@
 # Momentum/DevTab clone
 # App name coming soon...
 
-## Current Version: Beta 0.0.8
+## Current Version: 1.0.0
 
 <b> Organization, productivity, bookmarks application. </b>
 
@@ -23,6 +23,20 @@
 </ul>
 
 ## Changelog
+### Version 1.0.0
+<div>
+  <ul>
+    <li>MVP Launch</li>
+  </ul>
+</div>
+
+### Version 0.0.9
+<div>
+  <ul>
+    <li>Added Activity Manager</li>
+  </ul>
+</div>
+
 ### Version 0.0.8
 <div>
   <ul>
