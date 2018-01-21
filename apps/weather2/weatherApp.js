@@ -139,7 +139,7 @@ const getCityWeather = function() {
 	let city = document.getElementById('cityInput').value;
 
 	const cityCurrentXHR = new XMLHttpRequest();
-	cityCurrentXHR.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=' + city + pick(), true);
+	cityCurrentXHR.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=' + city + pick(), true);
 
 	cityCurrentXHR.onload = function() {
 		if (this.status === 200) {
@@ -158,7 +158,7 @@ const getCityWeather = function() {
 
 
 	const cityForecastXHR = new XMLHttpRequest();
-	cityForecastXHR.open('GET', 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + pick(), true);
+	cityForecastXHR.open('GET', 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + pick(), true);
 
 	cityForecastXHR.onload = function() {
 		if (this.status === 200) {
