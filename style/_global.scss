@@ -1,8 +1,10 @@
 body, html {
-  height: 100%;
+	height: 100% !important;
+	width: 100% !important;
   background-image: url("../images/bgImg.jpeg");
   background-position: center;
-  background-repeat: no-repeat;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	background-size: cover;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;

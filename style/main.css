@@ -50,10 +50,12 @@ table {
 }
 
 body, html {
-  height: 100%;
+  height: 100% !important;
+  width: 100% !important;
   background-image: url("../images/bgImg.jpeg");
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -83,6 +85,7 @@ body, html {
 #header {
   text-align: center;
   padding-top: 1em;
+  font-family: "Roboto", sans-serif;
 }
 
 #header h1 {
@@ -331,22 +334,23 @@ body, html {
 #calculatorApp #calcBox #inputBox {
   overflow: hidden;
   text-overflow: ellipsis;
+  border: 1px solid orange;
+  min-height: 55px;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 230px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-#calculatorApp #calcBox #inputBox p {
-  font-size: 2em;
-  padding-top: 24px;
+#calculatorApp #calcBox #inputBox span {
+  font-size: 1.6em;
+  padding-top: 14px;
 }
 
 #calculatorApp #calcBox .btn {
   border-radius: 5px;
-  background: #ffe259;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #ffa751, #ffe259);
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   margin: 10px;
   font-size: 2em;
 }
@@ -355,43 +359,21 @@ body, html {
   text-align: left;
 }
 
-#pomodoroApp i {
-  background: #fffc00;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #ffffff, #fffc00);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #ffffff, #fffc00);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+#pomodoroApp span {
+  font-size: 1.5em;
+  margin: 10px;
+  padding: 10px;
+  min-width: 55px;
 }
 
-#pomodoroApp i:hover {
-  cursor: pointer;
-}
-
-#pomodoroApp button {
-  background: #ffe259;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #ffa751, #ffe259);
-  border: none;
-  border-radius: 50%;
-  height: 70px;
-  width: 70px;
-  color: white;
-  margin: 10px 20px;
-  font-size: 1.25em;
-}
-
-#pomodoroApp button:hover {
-  cursor: pointer;
+#pomodoroApp a {
+  font-size: 1.5em;
+  margin: 10px;
+  padding: 10px;
 }
 
 #pomodoroApp p {
-  font-size: 4em;
+  font-size: 3.5em;
   color: white !important;
   margin: 20px 0;
 }
@@ -418,18 +400,21 @@ body, html {
 #movieQuiz #quizSubmit,
 #movieQuiz #quizStart,
 #movieQuiz #quizReset {
-  background: #ffe259;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #ffa751, #ffe259);
-  border: none;
-  border-radius: 10px;
-  height: 50px;
-  width: 150px;
+  border: 1px solid orange;
+  border-radius: 5px;
+  background: none;
+  padding: 10px 15px;
   color: white;
   font-size: 1.2em;
   margin: 40px 20px;
+}
+
+#movieQuiz #quizSubmit:hover,
+#movieQuiz #quizStart:hover,
+#movieQuiz #quizReset:hover {
+  cursor: pointer;
+  background: orange;
+  color: black;
 }
 
 #movieQuiz #quizCorrect {

@@ -21,14 +21,19 @@
 	#quizSubmit,
 	#quizStart,
 	#quizReset {
-		@include buttons;
-		border: none;
-		border-radius: 10px;
-		height: 50px;
-		width: 150px;
+		border: 1px solid orange;
+		border-radius: 5px;
+		background: none;
+		padding: 10px 15px;
 		color: white;
 		font-size: 1.2em;
 		margin: 40px 20px;
+
+		&:hover {
+			cursor: pointer;
+			background: orange;
+			color: black;
+		}
 	}
 
 	#quizCorrect {

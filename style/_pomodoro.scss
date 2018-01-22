@@ -3,31 +3,21 @@
 		text-align: left;
 	}
 
-	i {
-		@include icon-grad();
-
-		&:hover {
-			cursor: pointer;
-		}
+	span {
+		font-size: 1.5em;
+		margin: 10px;
+		padding: 10px;
+		min-width: 55px;
 	}
 
-	button {
-		@include buttons;
-		border: none;
-		border-radius: 50%;
-		height: 70px;
-		width: 70px;
-		color: white;
-		margin: 10px 20px;
-		font-size: 1.25em;
-
-		&:hover {
-			cursor: pointer;
-		}
+	a {
+		font-size: 1.5em;
+		margin: 10px;
+		padding: 10px;
 	}
 
 	p {
-		font-size: 4em;
+		font-size: 3.5em;
 		color: white !important;
 		margin: 20px 0;
 	}
