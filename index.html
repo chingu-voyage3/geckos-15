@@ -38,78 +38,78 @@
     <!-- Currently selected app area -->
     <div class="container" id="main">
     <!-- Weather -->
-    <div class="feature hidden" id="weather">
-      <section class="display">
-        <div class="container">
-          <h1 id="location"></h1>
-          <h3 id="currentTemp" class="current"></h3>
-          <h3 id="currentWeather" class="current"></h3>
-          <span><img id="currentIcon"></span>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Date</th>
-                <th scope="col">Forecast</th>
-                <th scope="col">Weather</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td id="day0Info"></td>
-                <td id="day0Forecast"></td>
-                <td><img src="" id="day0Icon"></td>
-              </tr>
-              <tr>
-                <td id="day1Info"></td>
-                <td id="day1Forecast"></td>
-                <td><img src="" id="day1Icon"></td>
-              </tr>
-              <tr>
-                <td id="day2Info"></td>
-                <td id="day2Forecast"></td>
-                <td><img src="" id="day2Icon"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-  
-      <section class="selectors">
-        <div class="container">
-          <div class="radioBtns">
-            <input type="radio" name="selectBtn" id="localBtn" checked>
-            <label for="localBtn">Local</label>
-            <input type="radio" name="selectBtn" id="cityBtn">
-            <label for="cityBtn">City</label>
+      <div class="feature hidden" id="weather">
+        <section class="display">
+          <div class="container">
+            <h1 id="location"></h1>
+            <h3 id="currentTemp" class="current"></h3>
+            <h3 id="currentWeather" class="current"></h3>
+            <span><img id="currentIcon"></span>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Forecast</th>
+                  <th scope="col">Weather</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="day0Info"></td>
+                  <td id="day0Forecast"></td>
+                  <td><img src="" id="day0Icon"></td>
+                </tr>
+                <tr>
+                  <td id="day1Info"></td>
+                  <td id="day1Forecast"></td>
+                  <td><img src="" id="day1Icon"></td>
+                </tr>
+                <tr>
+                  <td id="day2Info"></td>
+                  <td id="day2Forecast"></td>
+                  <td><img src="" id="day2Icon"></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <input type="text" id="cityInput" placeholder="Enter city name">
-          <button id="getWeatherButton">See Weather</button>
+        </section>
+    
+        <section class="selectors">
+          <div class="container">
+            <div class="radioBtns">
+              <input type="radio" name="selectBtn" id="localBtn" checked>
+              <label for="localBtn">Local</label>
+              <input type="radio" name="selectBtn" id="cityBtn">
+              <label for="cityBtn">City</label>
+            </div>
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button id="getWeatherButton">See Weather</button>
+          </div>
+        </section>
+      </div>
+      <!-- Todo -->
+      <div class="feature" id="todo">
+        <header class="header clearfix">
+          <h1>Activity Manager</h1>
+        </header> 
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Add activity..." aria-label="Add activity" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button id="addTodos" class="btn btn-outline-warning" type="button"><i class="fa fa-plus"></i></button>
+          </div>
         </div>
-      </section>
-    </div>
-    <!-- Todo -->
-    <div class="feature" id="todo">
-      <header class="header clearfix">
-        <h1>Activity Manager</h1>
-      </header> 
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Add activity..." aria-label="Add activity" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-          <button id="addTodos" class="btn btn-outline-warning" type="button"><i class="fa fa-plus"></i></button>
+        <button class="btn btn-outline-warning" type="button" id="clearTodos">Delete All</button>
+        <div class="row mt-4 display-tasks">
+          <div class="col-6">
+            <h2 class="text-center">Pending</h2>
+            <ul class="mt-4" id="todosList"></ul>
+          </div>
+          <div class="col-6">
+            <h2 class="text-center">Completed</h2>
+            <ul class="mt-4" id="todosCompleted"></ul>
+          </div>
         </div>
       </div>
-      <button class="btn btn-outline-warning" type="button" id="clearTodos">Delete All</button>
-      <div class="row mt-4 display-tasks">
-        <div class="col-6">
-          <h2 class="text-center">Pending</h2>
-          <ul class="mt-4" id="todosList"></ul>
-        </div>
-        <div class="col-6">
-          <h2 class="text-center">Completed</h2>
-          <ul class="mt-4" id="todosCompleted"></ul>
-        </div>
-      </div>
-    </div>
       <!-- Bookmarks app -->
       <div onload="bookmarksDisplay()" class="feature hidden" id="bookmarksApp">
         <header class="header clearfix">

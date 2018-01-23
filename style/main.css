@@ -50,6 +50,12 @@ table {
   border-spacing: 0;
 }
 
+@media screen and (max-width: 1439px) {
+  #main {
+    margin-left: 110px !important;
+  }
+}
+
 body, html {
   height: 100% !important;
   width: 100% !important;
