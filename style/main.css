@@ -18,30 +18,37 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
-  content: none; }
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 body, html {
   height: 100% !important;
@@ -56,61 +63,72 @@ body, html {
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+}
 
 .hidden {
-  display: none; }
+  display: none;
+}
 
 * {
   font-family: "Nunito", sans-serif;
-  outline: none !important; }
+  outline: none !important;
+}
 
 #main {
   max-width: 1000px;
   height: 600px;
   background-color: rgba(0, 0, 0, 0.5);
   margin: 3em auto;
-  border-radius: 10px; }
+  border-radius: 10px;
+}
 
 #header {
   text-align: center;
   padding-top: 1em;
-  font-family: "Quicksand", sans-serif; }
-  #header h1 {
-    font-size: 5em;
-    font-weight: 300;
-    background: #ffe259;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #ffa751, #ffe259);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; }
-  #header h2 {
-    font-size: 3em;
-    background: #ffe259;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #ffa751, #ffe259);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-transform: uppercase; }
-  #header h3 {
-    font-size: 2em;
-    background: #ffe259;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #ffa751, #ffe259);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; }
+  font-family: "Quicksand", sans-serif;
+}
+
+#header h1 {
+  font-size: 5em;
+  font-weight: 300;
+  background: #ffe259;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffa751, #ffe259);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#header h2 {
+  font-size: 3em;
+  background: #ffe259;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffa751, #ffe259);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+}
+
+#header h3 {
+  font-size: 2em;
+  background: #ffe259;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffa751, #ffe259);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
 #team {
   position: absolute;
@@ -118,77 +136,90 @@ body, html {
   left: 20px;
   color: white;
   font-family: "Quicksand", sans-serif;
-  font-size: 2em; }
-  #team i {
-    background: #fffc00;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #ffffff, #fffc00);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #ffffff, #fffc00);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    transform: scale(1);
-    transition: 0.5s; }
-    #team i:hover {
-      cursor: pointer;
-      background: #00c3ff;
-      /* fallback for old browsers */
-      background: -webkit-linear-gradient(to top, #ffff1c, #00c3ff);
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to top, #ffff1c, #00c3ff);
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      transform: scale(1.5);
-      transition: 0.5s; }
+  font-size: 2em;
+}
+
+#team i {
+  background: #fffc00;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffffff, #fffc00);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffffff, #fffc00);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+#team i:hover {
+  cursor: pointer;
+  background: #00c3ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #ffff1c, #00c3ff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #ffff1c, #00c3ff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transform: scale(1.5);
+  transition: 0.5s;
+}
 
 #sidebar {
   width: 80px;
   position: absolute;
   top: 25%;
-  left: 10px; }
-  #sidebar ul li {
-    padding-bottom: 10px;
-    text-align: center; }
-    #sidebar ul li i {
-      width: 50px;
-      height: 50px;
-      padding-top: 8px;
-      background: #fffc00;
-      /* fallback for old browsers */
-      background: -webkit-linear-gradient(to bottom, #ffffff, #fffc00);
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to bottom, #ffffff, #fffc00);
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      transform: scale(1);
-      transition: 0.5s; }
-      #sidebar ul li i:hover {
-        cursor: pointer;
-        background: #00c3ff;
-        /* fallback for old browsers */
-        background: -webkit-linear-gradient(to top, #ffff1c, #00c3ff);
-        /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to top, #ffff1c, #00c3ff);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        transform: scale(1.5);
-        transition: 0.5s; }
-    #sidebar ul li span {
-      color: white;
-      font-family: "Nunito", sans-serif;
-      text-shadow: 5px 5px 5px black; }
+  left: 10px;
+}
+
+#sidebar ul li {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+#sidebar ul li i {
+  width: 50px;
+  height: 50px;
+  padding-top: 8px;
+  background: #fffc00;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffffff, #fffc00);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffffff, #fffc00);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+#sidebar ul li i:hover {
+  cursor: pointer;
+  background: #00c3ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #ffff1c, #00c3ff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #ffff1c, #00c3ff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
+#sidebar ul li span {
+  color: white;
+  font-family: "Nunito", sans-serif;
+  text-shadow: 5px 5px 5px black;
+}
 
 #weather {
-<<<<<<< HEAD
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 #weather h1 {
@@ -247,127 +278,111 @@ body, html {
 #weather #getWeatherButton:hover {
   background-color: orange;
 }
-=======
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-family: "Nunito", sans-serif; }
-  #weather h1 {
-    font-size: 2em;
-    margin-bottom: 20px; }
-  #weather .container {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 500px;
-    color: white;
-    text-shadow: 5px 5px 5px black; }
-  #weather .radioBtns {
-    margin: 1.5rem 0 0 -0.5rem;
-    font-size: 1.25em; }
-  #weather .display {
-    display: none; }
-  #weather #localBtn, #weather #cityBtn {
-    cursor: pointer; }
-  #weather #cityBtn {
-    margin-left: 2rem; }
-  #weather #cityInput {
-    display: none;
-    padding: 0.5rem;
-    font-size: 1.25em;
-    margin-top: 1rem;
-    border: none;
-    border-radius: 10px;
-    outline: none;
-    color: orange; }
-  #weather #getWeatherButton {
-    padding: 0.6rem 1.3rem;
-    font-size: 1.5rem;
-    background: #ffe259;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #ffa751, #ffe259);
-    border-radius: 20px;
-    border: none;
-    margin: 1.5rem;
-    cursor: pointer;
-    outline: none;
-    color: white; }
-  #weather #getWeatherButton:hover {
-    background-color: #00ff00; }
->>>>>>> dbe72db659b7c609aad0d3a833859bd39c788697
 
 .feature {
   font-family: "Nunito", sans-serif;
   color: white;
-  padding: 20px; }
-  .feature h1 {
-    font-size: 2em;
-    padding: 10px 0;
-    margin-bottom: 40px; }
-  .feature h3 {
-    font-size: 1.2em;
-    padding: 10px 0; }
-  .feature .btn {
-    padding: 5px 15px;
-    border-radius: 20px; }
-  .feature #bmDisplay {
-    padding: 20px 5px; }
-    .feature #bmDisplay .col-3 {
-      font-family: "Nunito", sans-serif;
-      font-size: 1.3em;
-      padding: 10px;
-      border-left: solid 2px orange;
-      border-right: solid 2px orange; }
-      .feature #bmDisplay .col-3 a {
-        padding-left: 5px;
-        color: orange; }
+  padding: 20px;
+}
+
+.feature h1 {
+  font-size: 2em;
+  padding: 10px 0;
+  margin-bottom: 40px;
+}
+
+.feature h3 {
+  font-size: 1.2em;
+  padding: 10px 0;
+}
+
+.feature .btn {
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.feature #bmDisplay {
+  padding: 20px 5px;
+}
+
+.feature #bmDisplay .col-3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.3em;
+  padding: 10px;
+  border-left: solid 2px orange;
+  border-right: solid 2px orange;
+}
+
+.feature #bmDisplay .col-3 a {
+  padding-left: 5px;
+  color: orange;
+}
 
 #calculatorApp h1 {
-  text-align: left; }
+  text-align: left;
+}
+
 #calculatorApp #calcBox {
-  width: 350px; }
-  #calculatorApp #calcBox #inputBox {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    border: 1px solid orange;
-    min-height: 55px;
-    margin-top: 10px;
-    margin-left: 10px;
-    width: 230px;
-    background-color: rgba(0, 0, 0, 0.5); }
-    #calculatorApp #calcBox #inputBox span {
-      font-size: 1.6em;
-      padding-top: 14px; }
-  #calculatorApp #calcBox .btn {
-    border-radius: 5px;
-    width: 55px;
-    height: 55px;
-    margin: 10px;
-    font-size: 2em; }
+  width: 350px;
+}
+
+#calculatorApp #calcBox #inputBox {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid orange;
+  min-height: 55px;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 230px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#calculatorApp #calcBox #inputBox span {
+  font-size: 1.6em;
+  padding-top: 14px;
+}
+
+#calculatorApp #calcBox .btn {
+  border-radius: 5px;
+  width: 55px;
+  height: 55px;
+  margin: 10px;
+  font-size: 2em;
+}
 
 #pomodoroApp h1 {
-  text-align: left; }
+  text-align: left;
+}
+
 #pomodoroApp span {
   font-size: 1.5em;
   margin: 10px;
   padding: 10px;
   min-width: 55px;
-  border-radius: 20px; }
+  border-radius: 20px;
+}
+
 #pomodoroApp a {
   font-size: 1.5em;
   margin: 10px;
-  padding: 10px; }
+  padding: 10px;
+}
+
 #pomodoroApp p {
   font-size: 3.5em;
   color: white !important;
-  margin: 20px 0; }
+  margin: 20px 0;
+}
 
 #movieQuiz h1 {
-  text-align: left; }
+  text-align: left;
+}
+
 #movieQuiz p {
   margin: 10px 10px;
-  font-size: 1.6em; }
+  font-size: 1.6em;
+}
+
 #movieQuiz #quizAnswer {
   width: 400px;
   height: 35px;
@@ -375,7 +390,9 @@ body, html {
   border: none;
   padding: 0 10px;
   color: orange;
-  margin-top: 20px; }
+  margin-top: 20px;
+}
+
 #movieQuiz #quizSubmit,
 #movieQuiz #quizStart,
 #movieQuiz #quizReset {
@@ -385,38 +402,54 @@ body, html {
   padding: 10px 10px;
   color: white;
   font-size: 1em;
-  margin: 40px 20px; }
-  #movieQuiz #quizSubmit:hover,
-  #movieQuiz #quizStart:hover,
-  #movieQuiz #quizReset:hover {
-    cursor: pointer;
-    background: orange;
-    color: black; }
+  margin: 40px 20px;
+}
+
+#movieQuiz #quizSubmit:hover,
+#movieQuiz #quizStart:hover,
+#movieQuiz #quizReset:hover {
+  cursor: pointer;
+  background: orange;
+  color: black;
+}
+
 #movieQuiz #quizCorrect {
-  color: green; }
+  color: green;
+}
+
 #movieQuiz #quizWrong {
-  color: red; }
+  color: red;
+}
 
 #todo {
-  font-family: "Nunito", sans-serif; }
+  font-family: "Nunito", sans-serif;
+}
 
 i:hover {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 #todosCompleted li {
-  text-decoration: line-through !important; }
+  text-decoration: line-through !important;
+}
 
 .display-tasks h2 {
   color: orange;
   font-size: 1.5em;
   border-bottom: 2px solid orange;
-  padding-bottom: 5px; }
-.display-tasks li {
-  font-size: 1.2em; }
-  .display-tasks li i {
-    color: orange;
-    font-weight: bold; }
-    .display-tasks li i:hover {
-      cursor: pointer; }
+  padding-bottom: 5px;
+}
 
+.display-tasks li {
+  font-size: 1.2em;
+}
+
+.display-tasks li i {
+  color: orange;
+  font-weight: bold;
+}
+
+.display-tasks li i:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=main.css.map */
