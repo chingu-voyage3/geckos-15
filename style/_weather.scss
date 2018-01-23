@@ -5,11 +5,15 @@
 		font-size: 2em;
 		margin-bottom: 10px;
 	}
+	h3 {
+		text-transform: capitalize;
+	}
 	th {
 		font-weight: bold;
 	}
 
 	tr {
+		text-transform: capitalize;
 		img {
 			margin-top: -17px !important;
 			margin-bottom: -20px !important;
