@@ -400,21 +400,21 @@ document.getElementById("quizSubmit").addEventListener("click", function quizSub
   // Stores the user input
   let quizAnswer = document.getElementById("quizAnswer").value;
   // Checks if the answer is correct & if the game is over
-  if(quizAnswer.toLowerCase() == quizMovie.toLowerCase() && quizProgress < 10){
+  if(quizAnswer.toLowerCase() == quizMovie.toLowerCase() && quizProgress < 5){
     quizScore += 10; // Add points
     quizProgress += 1; // Go to the next step
     document.getElementById("quizCorrect").classList.remove("hidden"); // Messages
     document.getElementById("quizWrong").classList.add("hidden"); // Messages
     quizUpdate();
     getQuote();
-  } else if (quizAnswer.toLowerCase() !== quizMovie.toLowerCase() && quizProgress < 10){
+  } else if (quizAnswer.toLowerCase() !== quizMovie.toLowerCase() && quizProgress < 5){
     // quizScore -= 5; <= commenting out negative points
     quizProgress += 1;
     document.getElementById("quizWrong").classList.remove("hidden");
     document.getElementById("quizCorrect").classList.add("hidden");
     quizUpdate();
     getQuote();
-  } else { // If user plays 10 steps, the game is over
+  } else { // If user plays 5 steps, the game is over
     // Stores current score
     storeQuizScore();
     // Uses function that gets highest score from local storage
