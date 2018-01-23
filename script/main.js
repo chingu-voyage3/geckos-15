@@ -4,6 +4,11 @@ $("#calculator").on("click", function(){
   $("#calculatorApp").removeClass("hidden");
 });
 
+$("#weatherIcon").on("click", function(){
+  $(".feature").addClass("hidden");
+  $("#weather").removeClass("hidden");
+});
+
 $("#tomatoClock").on("click", function(){
   $(".feature").addClass("hidden");
   $("#pomodoroApp").removeClass("hidden");
