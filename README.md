@@ -1,5 +1,4 @@
-# Momentum/DevTab clone
-# App name coming soon...
+# Do-More
 
 ## Current Version: 1.0.0
 
