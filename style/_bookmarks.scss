@@ -1,5 +1,5 @@
 .feature {
-	font-family: $roboto;
+	font-family: $nunito;
 	color: white;
 	padding: 20px;
 
@@ -16,13 +16,15 @@
 
 	.btn {
 		padding: 5px 15px;
+		border-radius: 20px;
+
 	}
 
 	#bmDisplay {
 		padding: 20px 5px;
 
 		.col-3 {
-			font-family: $roboto;
+			font-family: $nunito;
 			font-size: 1.3em;
 			padding: 10px;
 			border-left: solid 2px orange;

@@ -275,6 +275,9 @@ function bmSubmit(pd){
   var bmUrl = document.getElementById("bmUrl").value;
 // Validation function, to check if the input is valid url
   if(!bmValidate(bmName, bmUrl)){
+    if (!bmName) {
+      pd.preventDefault();
+    }
     return false;
   }
 
@@ -787,7 +790,7 @@ var movies = [
   },
   {
     "movie": "Predator",
-    "quote": "Get to the chopper now!"
+    "quote": "Get to the chopper!"
   
   },
   {
