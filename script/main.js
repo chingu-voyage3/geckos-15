@@ -782,7 +782,7 @@ var movies = [
   },
   {
     "movie": "Predator",
-    "quote": "Get to the chopper now!"
+    "quote": "Get to the chopper!"
   
   },
   {
