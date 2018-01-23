@@ -31,11 +31,13 @@
         <li><i id="todoapp" class="fa fa-tasks fa-2x"></i><span>Activity Manager</span></li>
         <li><i id="quiz" class="fa fa-question fa-2x"></i><span>Movie Quiz</span></li>
         <li><i id="calculator" class="fa fa-calculator fa-2x"></i><span>Calculator</span></li>
-        <!-- <li><i id="weather" class="fa fa-cloud fa-2x"></i><span>Weather</span></li> -->
+        <li><i id="weatherIcon" class="fa fa-cloud fa-2x"></i><span>Weather</span></li>
       </ul>
-    </div>
+    </div>    
+    <!-- Currently selected app area -->
+    <div class="container" id="main">
     <!-- Weather -->
-    <div id="weather">
+    <div class="feature hidden" id="weather">
       <section class="display">
         <div class="container">
           <h1 id="location"></h1>
@@ -77,8 +79,6 @@
         </div>
       </section>
     </div>
-    <!-- Currently selected app area -->
-    <div class="container" id="main">
     <!-- Todo -->
     <div class="feature" id="todo">
       <header class="header clearfix">
