@@ -408,7 +408,7 @@ document.getElementById("quizSubmit").addEventListener("click", function quizSub
     quizUpdate();
     getQuote();
   } else if (quizAnswer.toLowerCase() !== quizMovie.toLowerCase() && quizProgress < 10){
-    quizScore -= 5;
+    // quizScore -= 5; <= commenting out negative points
     quizProgress += 1;
     document.getElementById("quizWrong").classList.remove("hidden");
     document.getElementById("quizCorrect").classList.add("hidden");
