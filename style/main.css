@@ -224,7 +224,16 @@ body, html {
 
 #weather h1 {
   font-size: 2em;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+#weather th {
+  font-weight: bold;
+}
+
+#weather tr img {
+  margin-top: -17px;
+  margin-bottom: -20px;
 }
 
 #weather .container {

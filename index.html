@@ -37,30 +37,39 @@
     <!-- Currently selected app area -->
     <div class="container" id="main">
     <!-- Weather -->
-    <div class="feature hidden" id="weather">
+    <div class="feature" id="weather">
       <section class="display">
         <div class="container">
           <h1 id="location"></h1>
           <h3 id="currentTemp" class="current"></h3>
           <h3 id="currentWeather" class="current"></h3>
           <span><img id="currentIcon"></span>
-          <br>
-          <br>
-          
-          <h3 id="day0Info" class="forecast"></h3>
-          <h4 id="day0Forecast" class="forecast"></h4>
-          <span><img src="" id="day0Icon"></span>
-          
-          <br>
-          <h3 id="day1Info" class="forecast"></h3>
-          <h4 id="day1Forecast" class="forecast"></h4>
-          <span><img id="day1Icon"></span>
-          
-          <br>
-          <h3 id="day2Info" class="forecast"></h3>
-          <h4 id="day2Forecast" class="forecast"></h4>
-          <span><img id="day2Icon"></span>
-          
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Forecast</th>
+                <th scope="col">Weather</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="day0Info"></td>
+                <td id="day0Forecast"></td>
+                <td><img src="" id="day0Icon"></td>
+              </tr>
+              <tr>
+                <td id="day1Info"></td>
+                <td id="day1Forecast"></td>
+                <td><img src="" id="day1Icon"></td>
+              </tr>
+              <tr>
+                <td id="day2Info"></td>
+                <td id="day2Forecast"></td>
+                <td><img src="" id="day2Icon"></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
   
@@ -69,18 +78,16 @@
           <div class="radioBtns">
             <input type="radio" name="selectBtn" id="localBtn" checked>
             <label for="localBtn">Local</label>
-  
             <input type="radio" name="selectBtn" id="cityBtn">
             <label for="cityBtn">City</label>
           </div>
           <input type="text" id="cityInput" placeholder="Enter city name">
-          <br>
           <button id="getWeatherButton">See Weather</button>
         </div>
       </section>
     </div>
     <!-- Todo -->
-    <div class="feature" id="todo">
+    <div class="feature hidden" id="todo">
       <header class="header clearfix">
         <h1>Activity Manager</h1>
       </header> 

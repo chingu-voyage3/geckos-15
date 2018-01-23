@@ -1,8 +1,19 @@
 #weather {
 	font-family: $nunito;
+
 	h1 {
 		font-size: 2em;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
+	}
+	th {
+		font-weight: bold;
+	}
+
+	tr {
+		img {
+			margin-top: -17px;
+			margin-bottom: -20px;
+		}
 	}
 	
 	.container {
