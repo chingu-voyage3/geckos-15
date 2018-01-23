@@ -4,7 +4,7 @@
 	}
 
 	p {
-		margin: 10px 0;
+		margin: 10px 10px;
 		font-size: 1.6em;
 	}
 
@@ -22,11 +22,11 @@
 	#quizStart,
 	#quizReset {
 		border: 1px solid orange;
-		border-radius: 5px;
+		border-radius: 20px;
 		background: none;
-		padding: 10px 15px;
+		padding: 10px 10px;
 		color: white;
-		font-size: 1.2em;
+		font-size: 1em;
 		margin: 40px 20px;
 
 		&:hover {
