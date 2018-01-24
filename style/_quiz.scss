@@ -29,10 +29,11 @@
 		color: orange;
 		font-size: 1em;
 		margin: 40px 20px;
-		@include buttons;
 
 		&:hover {
 			cursor: pointer;
+			@include buttons;
+			color: black;
 			
 		}
 	}

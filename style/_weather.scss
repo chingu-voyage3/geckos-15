@@ -69,6 +69,10 @@
 		cursor: pointer;
 		outline: none;
 		color: white;
-		@include buttons;
+
+		&:hover {
+			@include buttons;
+			color: black;
+		}
 	}
 }
