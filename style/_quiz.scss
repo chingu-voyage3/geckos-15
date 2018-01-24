@@ -6,12 +6,13 @@
 	p {
 		margin: 10px 10px;
 		font-size: 1.6em;
+		@include gradient;
 	}
 
 	#quizAnswer {
 		width: 400px;
 		height: 35px;
-		border-radius: 10px;
+		border-radius: 20px;
 		border: none;
 		padding: 0 10px;
 		color: orange;
@@ -25,14 +26,14 @@
 		border-radius: 20px;
 		background: none;
 		padding: 10px 10px;
-		color: white;
+		color: orange;
 		font-size: 1em;
 		margin: 40px 20px;
+		@include buttons;
 
 		&:hover {
 			cursor: pointer;
-			background: orange;
-			color: black;
+			
 		}
 	}
 

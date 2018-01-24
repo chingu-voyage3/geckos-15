@@ -61,17 +61,14 @@
 	
 	#getWeatherButton {
 		padding: 0.6rem 1.3rem;
-		font-size: 1.5rem;
-		border-radius: 10px;
+		font-size: 1.3rem;
+		border-radius: 20px;
 		border: 1px solid orange;
 		background: none;
 		margin: 1.5rem;
 		cursor: pointer;
 		outline: none;
 		color: white;
-	}
-	
-	#getWeatherButton:hover {
-		background-color: orange;
+		@include buttons;
 	}
 }

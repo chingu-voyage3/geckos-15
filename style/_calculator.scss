@@ -10,7 +10,7 @@
 		#inputBox {
 			overflow:hidden;
 			text-overflow:ellipsis;
-			border: 1px solid orange;
+			border: 2px solid orange;
 			min-height: 55px;
 			margin-top: 10px;
 			margin-left: 10px;
@@ -29,6 +29,7 @@
 			height: 55px;
 			margin: 10px;
 			font-size: 2em;
+			@include buttons;
 		}
 	}
 }

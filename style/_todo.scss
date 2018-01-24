@@ -11,10 +11,19 @@ i:hover {
     text-decoration: line-through !important;
   }
 }
-
+.form-control {
+  border-radius: 20px;
+  margin-bottom: 15px;
+  opacity: .9;
+}
 .display-tasks {
   h2 {
-    color: orange;
+    background-image: #ffe259;  /* fallback for old browsers */
+    background-image: -webkit-linear-gradient(to bottom, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
+    background-image: linear-gradient(to bottom, #ffa751, #ffe259);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
     font-size: 1.5em;
     border-bottom: 2px solid orange;
     padding-bottom: 5px;

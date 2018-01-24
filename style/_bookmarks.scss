@@ -10,14 +10,20 @@
 	}
 
 	h3 {
-		font-size: 1.2em;
+		font-size: 1.6em;
 		padding: 10px 0;
+		margin-bottom: 10px;
+		@include gradient;
 	}
 
 	.btn {
 		padding: 5px 15px;
 		border-radius: 20px;
+		@include buttons;
 
+	}
+	#bmName, #bmUrl {
+		border-radius: 20px;
 	}
 
 	#bmDisplay {
@@ -31,7 +37,7 @@
 			border-right: solid 2px orange;
 
 			a {
-				padding-left: 5px;
+				padding-left: 10px;
 				color: orange;
 			}
 		}
